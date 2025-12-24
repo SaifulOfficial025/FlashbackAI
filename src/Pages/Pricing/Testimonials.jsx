@@ -1,0 +1,155 @@
+import React from "react";
+import { BsFillStarFill } from "react-icons/bs";
+import { MdVerified } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa6";
+import { Button } from "../FlashbackAI/Button";
+
+const testimonials = [
+  {
+    before: "/loved1.png",
+    after: "/loved1.png",
+    avatar: "https://randomuser.me/api/portraits/women/1.jpg",
+    stars: 5,
+    text: "I animated an old photo of my childhood dog, Max. Seeing him move again – that little head tilt, his gentle expression – it brought me to tears. It felt like having a moment with him again..",
+    name: "Hannah",
+    location: "Sydney, Australia",
+    verified: true,
+  },
+  {
+    before: "/loved2.png",
+    after: "/loved2.png",
+    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    stars: 5,
+    text: "Incredible! My grandparents, seen in motion for the first time. The process was easy and the result was magical.",
+    name: "Elise",
+    location: "Paris, France",
+    verified: true,
+  },
+  {
+    before: "/loved3.png",
+    after: "/loved3.png",
+    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    stars: 5,
+    text: "I shared the video with my family — everyone was amazed. I can’t repeat enough how special this is.",
+    name: "Hans",
+    location: "Munich, Germany",
+    verified: true,
+  },
+  {
+    before: "/loved4.png",
+    after: "/loved4.png",
+    avatar: "https://randomuser.me/api/portraits/men/4.jpg",
+    stars: 5,
+    text: "This is unbelievable. FlashbackAI transformed a forgotten photo into a living memory. Highly recommended!",
+    name: "Liam",
+    location: "Toronto, Canada",
+    verified: true,
+  },
+  {
+    before: "/loved5.png",
+    after: "/loved5.png",
+    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+    stars: 5,
+    text: "My father was speechless. The animation was so lifelike, it felt like he was with us again.",
+    name: "Salah",
+    location: "Dubai, UAE",
+    verified: true,
+  },
+  {
+    before: "/loved6.png",
+    after: "/loved6.png",
+    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+    stars: 5,
+    text: "A priceless gift. My children saw their great-grandparents move for the first time. Thank you!",
+    name: "Maria",
+    location: "Madrid, Spain",
+    verified: true,
+  },
+];
+
+function Testimonials() {
+  return (
+    <div className="w-full flex flex-col items-center py-14 bg-[#fff] px-24">
+      {/* Heading */}
+      <div className="w-full flex flex-col items-center mb-8">
+        <span className="uppercase tracking-widest text-xs font-semibold text-[#7A693B] mb-2">
+          Testimonials
+        </span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">
+          Loved by Thousands
+        </h2>
+        <p className="text-gray-700 text-sm md:text-base text-center max-w-2xl mb-1">
+          Thousands have already brought their treasured photos to life with
+          gentle, lifelike motion — now it’s your turn.
+        </p>
+        <span className="text-md text-gray-500 mb-2">
+          Trusted by over{" "}
+          <span className="text-[#7A693B] font-semibold">
+            60,000+ users worldwide
+          </span>
+        </span>
+      </div>
+      {/* Testimonials Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb-10 w-full max-w-7xl px-2 md:px-0">
+        {testimonials.map((t, i) => (
+          <div
+            key={i}
+            className="bg-[#f2ebe2] rounded-2xl shadow p-5 flex flex-col border border-[#e5e0d6] relative min-h-[420px]"
+            style={{ boxShadow: "0 2px 12px 0 rgba(60, 40, 10, 0.07)" }}
+          >
+            {/* Double image with arrow overlay */}
+            <div className="relative mb-4 flex justify-center">
+              <div className="relative">
+                <img
+                  src={t.after}
+                  alt="after"
+                  className="w-52 h-52 rounded-xl object-cover"
+                />
+              </div>
+            </div>
+            {/* Stars */}
+            <div className="flex items-center mb-2 mt-2">
+              {[...Array(t.stars)].map((_, idx) => (
+                <BsFillStarFill
+                  key={idx}
+                  className="text-[#bfa76a] text-base mr-1"
+                />
+              ))}
+            </div>
+            {/* Quote */}
+            <p className="text-gray-800 text-[15px] italic mb-4 flex-1">
+              “{t.text}”
+            </p>
+            <div className="border-t border-[#e5e0d6] pt-3 flex items-center gap-3 mt-auto">
+              <img
+                src={t.avatar}
+                alt={t.name}
+                className="w-9 h-9 rounded-full object-cover border-2 border-white shadow"
+              />
+              <div>
+                <span className="font-semibold text-gray-900 block leading-tight">
+                  {t.name}
+                </span>
+                <span className="text-xs text-gray-500 block">
+                  {t.location}
+                </span>
+                {t.verified && (
+                  <span className="flex items-center text-xs text-[#1da1f2] mt-1 font-medium">
+                    <MdVerified className="mr-1 text-base" /> Verified user
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <Button className="bg-[#7A693B] hover:bg-[#5c522e] text-white px-8 py-3 rounded-full text-base font-semibold flex items-center gap-2 shadow-md">
+        <span className="flex items-center gap-2">
+          <FaArrowRight /> Try Now — Bring My Photo to Life
+        </span>
+      </Button>
+    </div>
+  );
+}
+
+export default Testimonials;
