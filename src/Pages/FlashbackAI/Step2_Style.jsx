@@ -110,45 +110,95 @@ const styles = [
   },
 ];
 
-export const Step2_Style = ({ onNext }) => (
-  <div className="max-w-4xl mx-auto text-center animate-in slide-in-from-bottom-4 duration-500">
-    <h1 className="text-4xl font-serif text-gray-900 mb-3 mx-auto leading-tight font-semibold">
-      How would you like to bring your first <br /> photo to life?
-    </h1>
-    <p className="text-gray-500 mb-12">
-      Choose an animation style that feels right for your memory
-    </p>
+export const Step2_Style = ({ onNext, selectedTheme }) => {
+  // If theme is not 'relive', show single default style and auto-proceed
+  if (selectedTheme?.id !== "relive") {
+    return (
+      <div className="max-w-4xl mx-auto text-center animate-in slide-in-from-bottom-4 duration-500">
+        <h1 className="text-4xl font-serif text-gray-900 mb-3 mx-auto leading-tight font-semibold">
+          {selectedTheme?.name} Theme Selected
+        </h1>
+        <p className="text-gray-500 mb-12">
+          Default style will be applied to your memory
+        </p>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-      {styles.map((style) => (
-        <div
-          key={style.id}
-          onClick={onNext}
-          className={`p-6 rounded-[1.5rem] border border-gray-200 text-left cursor-pointer transition-all hover:shadow-lg bg-[#f9fafb] relative group ${
-            style.recommended
-              ? "border-[#7c602e] ring-1 ring-[#7c602e]"
-              : "border-gray-100"
-          }`}
-        >
-          {style.recommended && (
-            <span className="absolute top-4 right-4 text-[10px] bg-[#fdf5e6] text-[#7c602e] px-2.5 py-1 rounded-md font-bold uppercase tracking-tight">
-              Recommended
-            </span>
-          )}
-          <div className="mb-4 p-2 bg-gray-50 w-fit rounded-lg group-hover:scale-110 transition-transform">
-            {style.icon}
+        <div className="max-w-md mx-auto mb-12">
+          <div
+            onClick={onNext}
+            className="p-8 rounded-[1.5rem] border-2 border-[#7c602e] ring-1 ring-[#7c602e] text-center cursor-pointer transition-all hover:shadow-lg bg-[#fdf5e6] relative group"
+          >
+            <div className="mb-4 p-3 bg-white w-fit rounded-lg mx-auto group-hover:scale-110 transition-transform">
+              <img
+                src={selectedTheme?.image}
+                alt={selectedTheme?.name}
+                className="w-12 h-12 object-contain"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
+              />
+            </div>
+            <h3 className="font-bold text-gray-900 mb-2 text-lg">
+              {selectedTheme?.name} Style
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed font-medium mb-4">
+              Optimized animation style for {selectedTheme?.name.toLowerCase()}{" "}
+              memories
+            </p>
+            <div className="inline-flex items-center gap-2 text-[10px] bg-white text-[#7c602e] px-3 py-1.5 rounded-md font-bold uppercase tracking-tight">
+              Default Style
+            </div>
           </div>
-          <h3 className="font-bold text-gray-900 mb-1">{style.name}</h3>
-          <p className="text-xs text-gray-500 leading-relaxed font-medium">
-            {style.desc}
-          </p>
         </div>
-      ))}
-    </div>
 
-    <div className="inline-flex items-center gap-2 text-[11px] font-bold text-gray-500 bg-gray-50 px-6 py-2.5 rounded-full border border-gray-100">
-      <Check size={14} className="text-green-500 stroke-[3px]" /> AI-guided
-      animation styles — no guesswork
+        <div className="inline-flex items-center gap-2 text-[11px] font-bold text-gray-500 bg-gray-50 px-6 py-2.5 rounded-full border border-gray-100">
+          <Check size={14} className="text-green-500 stroke-[3px]" /> Click to
+          continue
+        </div>
+      </div>
+    );
+  }
+
+  // Show all 8 styles for 'relive' theme
+  return (
+    <div className="max-w-4xl mx-auto text-center animate-in slide-in-from-bottom-4 duration-500">
+      <h1 className="text-4xl font-serif text-gray-900 mb-3 mx-auto leading-tight font-semibold">
+        How would you like to bring your first <br /> photo to life?
+      </h1>
+      <p className="text-gray-500 mb-12">
+        Choose an animation style that feels right for your memory
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+        {styles.map((style) => (
+          <div
+            key={style.id}
+            onClick={onNext}
+            className={`p-6 rounded-[1.5rem] border border-gray-200 text-left cursor-pointer transition-all hover:shadow-lg bg-[#f9fafb] relative group ${
+              style.recommended
+                ? "border-[#7c602e] ring-1 ring-[#7c602e]"
+                : "border-gray-100"
+            }`}
+          >
+            {style.recommended && (
+              <span className="absolute top-4 right-4 text-[10px] bg-[#fdf5e6] text-[#7c602e] px-2.5 py-1 rounded-md font-bold uppercase tracking-tight">
+                Recommended
+              </span>
+            )}
+            <div className="mb-4 p-2 bg-gray-50 w-fit rounded-lg group-hover:scale-110 transition-transform">
+              {style.icon}
+            </div>
+            <h3 className="font-bold text-gray-900 mb-1">{style.name}</h3>
+            <p className="text-xs text-gray-500 leading-relaxed font-medium">
+              {style.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="inline-flex items-center gap-2 text-[11px] font-bold text-gray-500 bg-gray-50 px-6 py-2.5 rounded-full border border-gray-100">
+        <Check size={14} className="text-green-500 stroke-[3px]" /> AI-guided
+        animation styles — no guesswork
+      </div>
     </div>
-  </div>
-);
+  );
+};

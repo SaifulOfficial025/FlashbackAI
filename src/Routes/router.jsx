@@ -16,6 +16,8 @@ import { ProfileSettingsPage } from "../Pages/Dashboard/ProfileSettingsPage";
 import GetCoinPage2 from "../Pages/Dashboard/GetCoinPage2";
 import Questions from "../Pages/Dashboard/Survey/Questions";
 import ThankYouPage from "../Pages/Dashboard/Survey/Thankyou";
+import UpsalePage from "../Pages/Pricing/UpsalePage";
+import BestDeal from "../Pages/Pricing/BestDeal";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ export const router = createBrowserRouter([
   {
     path: "/pricing",
     element: <PricingPage />,
+  },
+  {
+    path: "/upsale",
+    element: <UpsalePage />,
+  },
+  {
+    path: "/best-deal",
+    element: <BestDeal />,
   },
   {
     path: "/login",

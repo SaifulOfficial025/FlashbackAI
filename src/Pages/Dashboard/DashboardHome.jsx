@@ -35,8 +35,8 @@ export const DashboardHome = () => {
         className="p-8 pb-12 flex justify-center"
       >
         <button className="bg-[#7c602e] hover:bg-[#634d25] text-white w-full max-w-md py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-xl shadow-[#7c602e]/20 active:scale-[0.98] transition-all">
-          <Upload size={20} />
-          <span>Upload Photo</span>
+          {/* <Upload size={20} /> */}
+          <span>Make photo live</span>
         </button>
       </div>
     </div>

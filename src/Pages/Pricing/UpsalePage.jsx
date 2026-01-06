@@ -1,0 +1,253 @@
+import React from "react";
+import { FaCheck } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import Mastercard from "../../../public/master.png";
+import Visa from "../../../public/visa.png";
+import Amex from "../../../public/amex.png";
+import Header from "../../Shared/Header";
+import AnnouncementBar from "../../Shared/AnnouncementBar";
+import { Link } from "react-router-dom";
+
+function UpsalePage() {
+  return (
+    <div className="min-h-screen bg-[#fdfcfb] font-sans">
+      <AnnouncementBar />
+      {/* Header */}
+      <header className="py-8 text-center border-b border-gray-100 bg-white">
+        <span className="text-2xl font-serif font-bold text-[#7c602e] tracking-tight">
+          FlashbackAI
+        </span>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-5xl mx-auto px-6 py-16 text-center">
+        {/* Hero Image */}
+        <div className="mb-12 relative">
+          <div className="w-80 h-96 mx-auto  overflow-hidden ">
+            <img
+              src="/upsalehero.png"
+              alt="Upsale Hero"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Overlay Text */}
+          {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent rounded-b-[2rem] p-6">
+            <p className="text-white font-semibold text-lg">
+              Brought smiles back to life 💫
+            </p>
+          </div> */}
+        </div>
+
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+          Skin The Line & Relive Sooner!
+        </h1>
+
+        {/* Description */}
+        <p className="text-black text-lg mb-12 font-medium leading-relaxed max-w-lg mx-auto">
+          With Priority Processing, your enchanted memory will be created 2x
+          faster so you can see the magic unfold almost instantly.
+        </p>
+
+        {/* Benefits List */}
+        <div className="space-y-4 mb-12 max-w-md mx-auto text-left">
+          <div className="flex items-center gap-4 p-4  rounded-xl  hover:shadow-md transition-shadow">
+            <FaCheck className="text-[#785d26] text-xl flex-shrink-0" />
+            <span className="text-gray-700 font-semibold">
+              Results up to 3X faster
+            </span>
+          </div>
+          <div className="flex items-center gap-4 p-4  rounded-xl  hover:shadow-md transition-shadow">
+            <FaCheck className="text-[#785d26] text-xl flex-shrink-0" />
+            <span className="text-gray-700 font-semibold">
+              Perlect lor lau-minude gilts or emotional reveals
+            </span>
+          </div>
+          <div className="flex items-center gap-4 p-4  rounded-xl  hover:shadow-md transition-shadow">
+            <FaCheck className="text-[#785d26] text-xl flex-shrink-0" />
+            <span className="text-gray-700 font-semibold">
+              Works with every animation style
+            </span>
+          </div>
+        </div>
+      </main>
+
+      <div className="max-w-5xl mx-auto px-6 mt-12">
+        <div className="relative">
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <span className="bg-[#7c602e] text-white px-3 py-1 rounded-full text-md font-bold">
+              75% OFF
+            </span>
+          </div>
+
+          <div className="bg-white border border-gray-100 rounded-2xl py-8 px-6 text-center shadow-sm mt-6">
+            <h3 className="text-3xl font-semibold mb-1">
+              Todays only : <span className="font-bold">$9.99</span>
+            </h3>
+            <p className="text-gray-400 text-md mb-4">Regular price: $18</p>
+
+            <p className="font-semibold text-xl mb-2">
+              This exclusive offer is only available now
+            </p>
+            <p className="text-gray-600 text-xl mb-6">
+              Upgrade to skip the line and see your animated memory come to life
+              up to 3x faster - no waiting, just instant magic.
+            </p>
+            
+            <Link to="/best-deal">
+            <button className="max-w-2xl bg-[#7c602e] text-white px-6 py-3 rounded-full font-semibold text-xl shadow-md hover:bg-[#6b5127] transition-colors mb-4">
+              Yes, upgrade me!
+            </button>
+            </Link>
+            
+            <Link to="/dashboard">
+            <button className="w-full text-[#7c602e] font-semibold text-xl underline hover:text-[#6b5127] transition-colors py-2">
+              No, I'll keep the standard speed
+            </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center gap-6 mt-8 max-w-2xl mx-auto">
+          <img src={Visa} alt="Visa" className="h-10 " />
+          <img src={Amex} alt="Amex" className="h-10 " />
+          <img src={Mastercard} alt="Mastercard" className="h-10 " />
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-serif font-bold text-gray-900 mb-12 text-center leading-tight">
+          Hear from others who skipped the line and love it
+        </h2>
+
+        <div className="space-y-8">
+          {/* Testimonial Card 1 */}
+          <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+            <div className="flex gap-6 items-start">
+              {/* Profile Image */}
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150"
+                alt="Jonas"
+                className="w-20 h-20 rounded-2xl object-cover flex-shrink-0"
+              />
+
+              {/* Content */}
+              <div className="flex-1">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-lg">Jonas</h3>
+                    <p className="text-gray-600 text-sm">Munich, Germany</p>
+                    <div className="flex items-center gap-1 mt-2">
+                      <FaCheck className="w-4 h-4 text-blue-500" />
+                      <span className="text-xs text-gray-600 font-medium">
+                        Verified user
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Star Rating */}
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} className="w-5 h-5 text-[#c9a661]" />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Testimonial Text */}
+                <p className="text-gray-700 leading-relaxed">
+                  "I uploaded a faded childhood photo, and FlashbackAI made it
+                  feel real again. I didn't expect to get this emotional."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Testimonial Card 2 */}
+          <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+            <div className="flex gap-6 items-start">
+              {/* Profile Image */}
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150"
+                alt="Jonas"
+                className="w-20 h-20 rounded-2xl object-cover flex-shrink-0"
+              />
+
+              {/* Content */}
+              <div className="flex-1">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-lg">Jonas</h3>
+                    <p className="text-gray-600 text-sm">Munich, Germany</p>
+                    <div className="flex items-center gap-1 mt-2">
+                      <FaCheck className="w-4 h-4 text-blue-500" />
+                      <span className="text-xs text-gray-600 font-medium">
+                        Verified user
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Star Rating */}
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} className="w-5 h-5 text-[#c9a661]" />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Testimonial Text */}
+                <p className="text-gray-700 leading-relaxed">
+                  "I uploaded a faded childhood photo, and FlashbackAI made it
+                  feel real again. I didn't expect to get this emotional."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Testimonial Card 3 */}
+          <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+            <div className="flex gap-6 items-start">
+              {/* Profile Image */}
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150"
+                alt="Jonas"
+                className="w-20 h-20 rounded-2xl object-cover flex-shrink-0"
+              />
+
+              {/* Content */}
+              <div className="flex-1">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-lg">Jonas</h3>
+                    <p className="text-gray-600 text-sm">Munich, Germany</p>
+                    <div className="flex items-center gap-1 mt-2">
+                      <FaCheck className="w-4 h-4 text-blue-500" />
+                      <span className="text-xs text-gray-600 font-medium">
+                        Verified user
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Star Rating */}
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} className="w-5 h-5 text-[#c9a661]" />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Testimonial Text */}
+                <p className="text-gray-700 leading-relaxed">
+                  "I uploaded a faded childhood photo, and FlashbackAI made it
+                  feel real again. I didn't expect to get this emotional."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default UpsalePage;

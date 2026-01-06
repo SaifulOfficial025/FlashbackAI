@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 
-export const Step3_Loading = ({ onNext }) => {
+export const Step4_Loading = ({ onNext }) => {
   const [progress, setProgress] = useState(0);
 
   const statusSteps = [

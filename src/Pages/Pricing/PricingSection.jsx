@@ -1,26 +1,91 @@
-import React, { useState } from 'react';
-import { Check, Star, Sparkles, Wind, History, Ghost, Sun, Leaf, Hourglass, Activity } from 'lucide-react';
-import { Button } from '../FlashbackAI/Button';
+import React, { useState } from "react";
+import {
+  Check,
+  Star,
+  Sparkles,
+  Wind,
+  History,
+  Ghost,
+  Sun,
+  Leaf,
+  Hourglass,
+  Activity,
+} from "lucide-react";
+import { Button } from "../FlashbackAI/Button";
+import { Link } from "react-router-dom";
 
 const includedStyles = [
-  { name: 'Memory Match Motion', desc: 'AI suggests the higher impact movement for your specific photo style.', icon: <Sparkles size={16} className="text-yellow-500" /> },
-  { name: 'Gentle Sway', desc: 'Subtle movement that breathes life into portraits with soft, natural motion.', icon: <Wind size={16} className="text-green-500" /> },
-  { name: 'Vintage Film', desc: 'Classic cinema feel with subtle grain and nostalgic motion effects.', icon: <History size={16} className="text-blue-400" /> },
-  { name: 'Dreamy Float', desc: 'Ethereal, cloud-like movement perfect for scenic and landscape memories.', icon: <Ghost size={16} className="text-gray-400" /> },
-  { name: 'Warm Glow', desc: 'Soft lighting shifts that add warmth and depth to cherished moments.', icon: <Sun size={16} className="text-orange-400" /> },
-  { name: 'Nature Breeze', desc: 'Organic motion that brings outdoor scenes to life with gentle wind effects.', icon: <Leaf size={16} className="text-emerald-500" /> },
-  { name: 'Timeless Fade', desc: 'Elegant transitions that evoke the passage of time with grace.', icon: <Hourglass size={16} className="text-amber-600" /> },
-  { name: 'Joyful Pulse', desc: 'Vibrant energy for celebrations and happy moments full of life.', icon: <Activity size={16} className="text-rose-500" /> },
+  {
+    name: "Memory Match Motion",
+    desc: "AI suggests the higher impact movement for your specific photo style.",
+    icon: <Sparkles size={16} className="text-yellow-500" />,
+  },
+  {
+    name: "Gentle Sway",
+    desc: "Subtle movement that breathes life into portraits with soft, natural motion.",
+    icon: <Wind size={16} className="text-green-500" />,
+  },
+  {
+    name: "Vintage Film",
+    desc: "Classic cinema feel with subtle grain and nostalgic motion effects.",
+    icon: <History size={16} className="text-blue-400" />,
+  },
+  {
+    name: "Dreamy Float",
+    desc: "Ethereal, cloud-like movement perfect for scenic and landscape memories.",
+    icon: <Ghost size={16} className="text-gray-400" />,
+  },
+  {
+    name: "Warm Glow",
+    desc: "Soft lighting shifts that add warmth and depth to cherished moments.",
+    icon: <Sun size={16} className="text-orange-400" />,
+  },
+  {
+    name: "Nature Breeze",
+    desc: "Organic motion that brings outdoor scenes to life with gentle wind effects.",
+    icon: <Leaf size={16} className="text-emerald-500" />,
+  },
+  {
+    name: "Timeless Fade",
+    desc: "Elegant transitions that evoke the passage of time with grace.",
+    icon: <Hourglass size={16} className="text-amber-600" />,
+  },
+  {
+    name: "Joyful Pulse",
+    desc: "Vibrant energy for celebrations and happy moments full of life.",
+    icon: <Activity size={16} className="text-rose-500" />,
+  },
 ];
 
 const packages = [
-  { id: 'weekly', name: 'Weekly Plan', price: '$2.49', original: '$6.99', label: null, desc: "4 Credits Every Week" },
-  { id: 'family', name: 'Fortnightly Package', price: '$2.49', original: '$12.99', label: 'MOST POPULAR PACKAGE',  desc: "4 Credits Every Week" },
-  { id: 'monthly', name: 'Monthly Package', price: '$9.49', original: '$24.99', label: 'BEST VALUE', desc: "4 Credits Every Week" },
+  {
+    id: "weekly",
+    name: "Weekly Plan",
+    price: "$2.49",
+    original: "$6.99",
+    label: null,
+    desc: "4 Credits Every Week",
+  },
+  {
+    id: "family",
+    name: "Fortnightly Package",
+    price: "$2.49",
+    original: "$12.99",
+    label: "MOST POPULAR PACKAGE",
+    desc: "4 Credits Every Week",
+  },
+  {
+    id: "monthly",
+    name: "Monthly Package",
+    price: "$9.49",
+    original: "$24.99",
+    label: "BEST VALUE",
+    desc: "4 Credits Every Week",
+  },
 ];
 
 export const PricingSection = () => {
-  const [selected, setSelected] = useState('family');
+  const [selected, setSelected] = useState("family");
 
   return (
     <section className="max-w-2xl mx-auto text-center py-12 px-4">
@@ -134,7 +199,11 @@ export const PricingSection = () => {
         ))}
       </div>
 
-      <Button className="w-2/3 py-4 text-lg mb-4 uppercase">Claim Offer</Button>
+      <Link to="/upsale">
+        <Button className="w-2/3 py-4 text-lg mb-4 uppercase">
+          Claim Offer
+        </Button>
+      </Link>
       <div className="flex items-center justify-center gap-1.5 text-[9px] text-gray-400 font-bold mb-4">
         <Check size={10} className="text-green-500" /> SECURE CHECKOUT • 100%
         SATISFACTION GUARANTEED
