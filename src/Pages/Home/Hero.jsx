@@ -2,10 +2,11 @@ import React from "react";
 import { BsStarFill } from "react-icons/bs";
 import Button from "../../Shared/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { IoShieldHalfSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 function Hero() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <section className="bg-white py-12 md:py-20">
       <div className="max-w-full mx-12 px-4 md:px-8">
@@ -67,6 +68,10 @@ function Hero() {
                 </span>
                 <span>Try Now — Bring My Photo to Life</span>
               </Button>
+            </div>
+            <div className="flex items-center">
+              <IoShieldHalfSharp className="inline-block mr-2 text-gray-600 w-5 h-5" />
+              <p>100% Private — Encrypted, Secure & Always Yours.</p>
             </div>
           </div>
 

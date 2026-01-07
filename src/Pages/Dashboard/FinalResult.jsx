@@ -26,7 +26,7 @@ function FinalResult() {
       </div>
 
       <div className=" rounded-2xl overflow-hidden shadow-sm p-6">
-        <div className="w-full max-w-[640px] mx-auto">
+        <div className="max-w-full  mx-auto">
           <div className="rounded-2xl overflow-hidden bg-gray-100">
             <img
               src="/result.jpg"

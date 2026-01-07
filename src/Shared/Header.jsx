@@ -56,7 +56,7 @@ function Header() {
           </div>
           <div className="flex items-center gap-3">
             {isAuthenticated ? (
-              <Button onClick={() => navigate("/dashboard")}>Dashboard</Button>
+              <Button onClick={() => navigate("/dashboard")}>Sign In</Button>
             ) : (
               <Button
                 className=" hover:bg-amber-800 text-white rounded-full px-4 py-2 flex items-center gap-2"

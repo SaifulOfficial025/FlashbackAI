@@ -30,13 +30,13 @@ export const Topbar = () => {
           <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
         </button>
 
-        {/* Coins Badge (clickable) */}
+        {/* Credit Badge (clickable) */}
         <button
-          onClick={() => navigate("/dashboard/get-coins")}
+          onClick={() => navigate("/dashboard/get-Credit")}
           className="bg-[#f2ede4] px-4 py-2 rounded-full flex items-center gap-2 border border-[#7c602e]/10 hover:shadow-sm"
-          aria-label="Get coins"
+          aria-label="Get Credit"
         >
-          <span className="text-sm text-gray-500 font-medium">Coins:</span>
+          <span className="text-sm text-gray-500 font-medium">Credit:</span>
           <span className="text-sm text-[#7c602e] font-bold">3</span>
         </button>
       </div>

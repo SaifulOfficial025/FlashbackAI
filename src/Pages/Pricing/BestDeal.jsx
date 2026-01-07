@@ -9,7 +9,7 @@ export default function BestDeal() {
     >
       <div className="max-w-3xl mx-auto text-center pt-24 pb-32 px-6">
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-6 mt-20">
-          Unlock the Best Deal: 200 Coins
+          Unlock the Best Deal: 200 Credit
           <br />
           for only A$179.90!
         </h1>
@@ -17,7 +17,7 @@ export default function BestDeal() {
           Upgrade your experience with our best-value coin bundle.
         </p>
         <p className="text-white/80 text-sm max-w-2xl mx-auto mb-8">
-          Get 200 coins for just A$179.90 - that's 60% more value compared to
+          Get 200 Credit for just A$179.90 - that's 60% more value compared to
           the smaller pack. Whether you're diving deep or coming back for more,
           this is the smartest way to power up.
         </p>
@@ -41,7 +41,7 @@ export default function BestDeal() {
           </div>
 
           <p className="text-center text-gray-600 text-sm mt-4 mb-6">
-            Elevate your experience - get more coins and do more with every
+            Elevate your experience - get more Credit and do more with every
             moment.
           </p>
 

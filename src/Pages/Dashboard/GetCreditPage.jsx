@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CheckCircle2, Link } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import coins from "../../../public/coins.png";
+import Credit from "../../../public/coins.png";
 
 const packages = [
   {
@@ -42,7 +42,7 @@ const packages = [
   },
 ];
 
-export const GetCoinsPage = () => {
+export const GetCreditPage = () => {
   const [selected, setSelected] = useState("max");
   const navigate = useNavigate();
 
@@ -107,7 +107,7 @@ export const GetCoinsPage = () => {
 
               {/* Center: Coin Visual */}
               <div className="hidden sm:block ml-44">
-                <img src={coins} alt="" />
+                <img src={Credit} alt="" />
               </div>
 
               {/* Right: Price */}
@@ -127,7 +127,7 @@ export const GetCoinsPage = () => {
       {/* Action Button */}
       <div className="w-full max-w-[480px] text-center">
         <button
-          onClick={() => navigate("/dashboard/got-coins")}
+          onClick={() => navigate("/dashboard/got-Credit")}
           className="w-full bg-[#7c602e] hover:bg-[#634d25] text-white py-4 rounded-2xl font-bold text-base uppercase tracking-widest shadow-xl shadow-[#7c602e]/20 transition-all active:scale-[0.98] mb-6"
         >
           CLAIM OFFER

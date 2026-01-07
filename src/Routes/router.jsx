@@ -7,7 +7,7 @@ import { Step_PreviewReady } from "../Pages/FlashbackAI/Step_PreviewReady";
 import PricingPage from "../Pages/Pricing/PricingPage";
 import LoginPage from "../Pages/Authentication/SignIn";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-import { GetCoinsPage } from "../Pages/Dashboard/GetCoinsPage";
+import { GetCreditPage } from "../Pages/Dashboard/GetCreditPage";
 import { DashboardLayout } from "../Pages/Dashboard/DashboardLayout";
 import { DashboardHome } from "../Pages/Dashboard/DashboardHome";
 import { InviteFriendsPage } from "../Pages/Dashboard/InviteFriendsPage";
@@ -18,6 +18,8 @@ import Questions from "../Pages/Dashboard/Survey/Questions";
 import ThankYouPage from "../Pages/Dashboard/Survey/Thankyou";
 import UpsalePage from "../Pages/Pricing/UpsalePage";
 import BestDeal from "../Pages/Pricing/BestDeal";
+import DashboardFlashbackFlow from "../Pages/Dashboard/DashboardFlashbackFlow";
+import FinalResult from "../Pages/Dashboard/FinalResult";
 
 export const router = createBrowserRouter([
   {
@@ -61,11 +63,19 @@ export const router = createBrowserRouter([
         element: <DashboardHome />,
       },
       {
-        path: "get-coins",
-        element: <GetCoinsPage />,
+        path: "create-moment",
+        element: <DashboardFlashbackFlow />,
       },
       {
-        path: "got-coins",
+        path: "final-result",
+        element: <FinalResult />,
+      },
+      {
+        path: "get-Credit",
+        element: <GetCreditPage />,
+      },
+      {
+        path: "got-Credit",
         element: <GetCoinPage2 />,
       },
       {

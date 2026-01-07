@@ -18,8 +18,8 @@ const navItems = [
   },
   {
     icon: <Landmark size={20} />,
-    label: "Get coins",
-    path: "/dashboard/get-coins",
+    label: "Get More Credits",
+    path: "/dashboard/get-Credit",
   },
 ];
 
@@ -89,7 +89,7 @@ export const Sidebar = ({ className }) => {
             <div className="mt-4">
               <p className="font-bold text-[15px]">Invite a friend</p>
               <p className="text-[11px] text-white/80 leading-tight mt-1">
-                Get 10 coins for each
+                Get 10 Credits for each
                 <br /> invitation
               </p>
             </div>
@@ -165,7 +165,10 @@ export const Sidebar = ({ className }) => {
           )}
         </div>
         <p className="text-[10px] text-gray-400 px-2 font-medium">
-          Terms of Service & Privacy Policy
+          Terms of Service
+        </p>
+        <p className="text-[10px] text-gray-400 px-2 font-medium">
+          Privacy Policy
         </p>
       </div>
     </aside>

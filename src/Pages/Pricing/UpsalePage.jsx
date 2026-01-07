@@ -93,17 +93,17 @@ function UpsalePage() {
               Upgrade to skip the line and see your animated memory come to life
               up to 3x faster - no waiting, just instant magic.
             </p>
-            
+
             <Link to="/best-deal">
-            <button className="max-w-2xl bg-[#7c602e] text-white px-6 py-3 rounded-full font-semibold text-xl shadow-md hover:bg-[#6b5127] transition-colors mb-4">
-              Yes, upgrade me!
-            </button>
+              <button className="max-w-2xl bg-[#7c602e] text-white px-6 py-3 rounded-full font-semibold text-xl shadow-md hover:bg-[#6b5127] transition-colors mb-4">
+                Yes, upgrade me!
+              </button>
             </Link>
-            
-            <Link to="/dashboard">
-            <button className="w-full text-[#7c602e] font-semibold text-xl underline hover:text-[#6b5127] transition-colors py-2">
-              No, I'll keep the standard speed
-            </button>
+
+            <Link to="/best-deal">
+              <button className="w-full text-[#7c602e] font-semibold text-xl underline hover:text-[#6b5127] transition-colors py-2">
+                No, I'll keep the standard speed
+              </button>
             </Link>
           </div>
         </div>

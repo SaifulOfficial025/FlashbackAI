@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { User, Copy, LogOut, ChevronDown } from "lucide-react";
 
-const historyData = [{ id: "2222JJJ2", coins: 1, date: "11\\12\\2222" }];
+const historyData = [{ id: "2222JJJ2", Credit: 1, date: "11\\12\\2222" }];
 
 export const ProfileSettingsPage = () => {
   const [referral] = useState("httpdhbfhbw b"); // Matches the typo in image
@@ -132,7 +132,7 @@ export const ProfileSettingsPage = () => {
                       Moment ID
                     </th>
                     <th className="py-4 font-bold uppercase tracking-wider">
-                      Coins Use
+                      Credit Use
                     </th>
                     <th className="py-4 font-bold uppercase tracking-wider">
                       Date
@@ -145,7 +145,7 @@ export const ProfileSettingsPage = () => {
                       <td className="py-5 underline decoration-[#7c602e]/30 underline-offset-4 text-gray-400 cursor-pointer">
                         {row.id}
                       </td>
-                      <td className="py-5 text-gray-400">{row.coins}</td>
+                      <td className="py-5 text-gray-400">{row.Credit}</td>
                       <td className="py-5 text-gray-400">{row.date}</td>
                     </tr>
                   ))}
