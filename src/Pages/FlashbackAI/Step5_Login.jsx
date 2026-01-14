@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "./Button";
 import AnnouncementBar from "../../Shared/AnnouncementBar";
 import { useNavigate } from "react-router-dom";
+import { FaCheck } from "react-icons/fa";
 
 export const Step5_Login = ({ onNext }) => {
   const navigate = useNavigate();
@@ -61,16 +62,27 @@ export const Step5_Login = ({ onNext }) => {
       </header>
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl font-serif text-gray-900 mb-4 leading-tight font-medium mx-auto">
-        {showLogin
-          ? "Login to your account"
-          : "Enter your email to start creating and viewing your memories."}
+        {showLogin ? (
+          "Login to your account"
+        ) : (
+          <>
+            Enter your email to start creating
+            <br />
+            and viewing your memories.
+          </>
+        )}
       </h1>
 
       {/* Subheading */}
       <p className="text-gray-400 text-sm mb-10 font-medium tracking-tight">
-        {showLogin
-          ? "Enter your email and password to access your memories."
-          : "make sure its correct , so your moment reach safely"}
+        {showLogin ? (
+          "Enter your email and password to access your memories."
+        ) : (
+          <>
+            <FaCheck className="inline mr-1 text-green-500" /> make sure its
+            correct , so your moment reach safely!
+          </>
+        )}
       </p>
 
       {/* Auth Form */}
@@ -180,6 +192,14 @@ export const Step5_Login = ({ onNext }) => {
           </form>
         )}
       </div>
+      <p className="text-[14px] text-gray-400 leading-relaxed font-medium mt-6">
+        We respect your privacy. We will never sell, rent or share your email
+        address. That's more than a{" "}
+        <a href="" className="text-blue-600 underline">
+          policy
+        </a>
+        , it's our personal guarantee.
+      </p>
     </div>
   );
 };

@@ -3,66 +3,72 @@ import { BsFillStarFill } from "react-icons/bs";
 import { MdVerified } from "react-icons/md";
 import Button from "../../Shared/Button";
 import { FaArrowRight } from "react-icons/fa6";
+import sarah from "../../../public/Sarah M..jpg";
+import marco from "../../../public/Marco D..jpg";
+import liam from "../../../public/Liam G..jpg";
+import jonas from "../../../public/Jonas K..jpg";
+import hannah from "../../../public/Hannah P..jpg";
+import elise from "../../../public/Elise D.jpg";
 
 const testimonials = [
   {
     before: "/loved1.png",
     after: "/loved1.png",
-    avatar: "https://randomuser.me/api/portraits/women/1.jpg",
+    avatar: sarah,
     stars: 5,
-    text: "I animated an old photo of my childhood dog, Max. Seeing him move again – that little head tilt, his gentle expression – it brought me to tears. It felt like having a moment with him again..",
-    name: "Hannah",
-    location: "Sydney, Australia",
+    text: "Seeing my grandfather smile and move again after 40 years… I cried instantly. It felt like a moment I never thought I’d get back.",
+    name: "Sarah M.",
+    location: "London, UK",
     verified: true,
   },
   {
     before: "/loved2.png",
     after: "/loved2.png",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    avatar: marco,
     stars: 5,
-    text: "Incredible! My grandparents, seen in motion for the first time. The process was easy and the result was magical.",
-    name: "Elise",
-    location: "Paris, France",
+    text: "When the photo of my grandparents came alive, I literally gasped. FlashbackAI created a moment I didn’t know I needed.",
+    name: "Marco D.",
+    location: "Florence, Italy",
     verified: true,
   },
   {
     before: "/loved3.png",
     after: "/loved3.png",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    avatar: hannah,
     stars: 5,
-    text: "I shared the video with my family — everyone was amazed. I can’t repeat enough how special this is.",
-    name: "Hans",
-    location: "Munich, Germany",
+    text: "Seeing my grandfather smile and move again after 40 years… I cried instantly. It felt like a moment I never thought I’d get back.",
+    name: "Hannah P.",
+    location: "Sydney, Australia",
     verified: true,
   },
   {
     before: "/loved4.png",
     after: "/loved4.png",
-    avatar: "https://randomuser.me/api/portraits/men/4.jpg",
+    avatar: elise,
     stars: 5,
-    text: "This is unbelievable. FlashbackAI transformed a forgotten photo into a living memory. Highly recommended!",
-    name: "Liam",
-    location: "Toronto, Canada",
+    text: "I surprised my friend with this to bring their family photo to life. We didn’t expect such an emotional reaction.",
+    name: "Elise D.",
+    location: "Paris, France",
     verified: true,
   },
   {
     before: "/loved5.png",
     after: "/loved5.png",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+    avatar: jonas,
     stars: 5,
-    text: "My father was speechless. The animation was so lifelike, it felt like he was with us again.",
-    name: "Salah",
-    location: "Dubai, UAE",
+    text: "I uploaded a faded childhood photo, and FlashbackAI made it feel real again. I didn’t expect to get this emotional.",
+    name: "Jonas K.",
+    location: "Munich, Germany",
     verified: true,
   },
   {
     before: "/loved6.png",
     after: "/loved6.png",
-    avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+    avatar: liam,
     stars: 5,
-    text: "A priceless gift. My children saw their great-grandparents move for the first time. Thank you!",
-    name: "Maria",
-    location: "Madrid, Spain",
+    text: "The realism is unbelievable. FlashbackAI turned a simple photo into something my family will treasure forever.",
+    name: "Liam G.",
+    location: "Toronto, Canada",
     verified: true,
   },
 ];

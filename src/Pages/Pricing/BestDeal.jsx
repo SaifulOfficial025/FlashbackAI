@@ -26,7 +26,7 @@ export default function BestDeal() {
         <div className="mt-6 bg-white rounded-2xl max-w-xl mx-auto p-6 shadow-lg">
           <div className="flex justify-center -mt-8">
             <div className="bg-yellow-300 text-xs text-[#774d00] font-bold px-3 py-1 rounded-full">
-              75% OFF
+              Last Chance
             </div>
           </div>
 
@@ -47,7 +47,7 @@ export default function BestDeal() {
 
           <div className="flex flex-col items-center gap-3">
             <button className="bg-[#7c602e] text-white px-10 py-3 rounded-full font-semibold shadow hover:bg-[#6b5127] transition-colors">
-              Upgrade & Save Big
+              Upgrade & Save Big00
             </button>
             <Link to="/dashboard">
               <button className="text-sm text-gray-700 underline">
@@ -58,11 +58,12 @@ export default function BestDeal() {
         </div>
 
         {/* Payment icons */}
-        <div className="max-w-md mx-auto bg-white rounded-full mt-8 py-4 flex items-center justify-center gap-6 shadow">
-          <img src="/master.png" alt="master" className="h-6" />
+        <div className="max-w-xl mx-auto bg-white rounded-full mt-8 py-4 flex items-center justify-center gap-6 shadow">
+          {/* <img src="/master.png" alt="master" className="h-6" />
           <img src="/visa.png" alt="visa" className="h-6" />
-          <img src="/amex.png" alt="amex" className="h-6" />
-          <span className="text-sm text-gray-600">Pay</span>
+          <img src="/amex.png" alt="amex" className="h-6" /> */}
+          <img src="/payments.png" alt="" />
+          {/* <span className="text-sm text-gray-600">Pay</span> */}
         </div>
       </div>
     </div>

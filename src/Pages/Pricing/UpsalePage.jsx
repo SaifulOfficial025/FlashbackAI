@@ -7,6 +7,10 @@ import Amex from "../../../public/amex.png";
 import Header from "../../Shared/Header";
 import AnnouncementBar from "../../Shared/AnnouncementBar";
 import { Link } from "react-router-dom";
+import { FaCheckCircle } from "react-icons/fa";
+import sarah from "../../../public/Sarah M..jpg";
+import marco from "../../../public/Marco D..jpg";
+import hannah from "../../../public/Hannah P..jpg";
 
 function UpsalePage() {
   return (
@@ -39,13 +43,13 @@ function UpsalePage() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight -mt-24">
           Skin The Line & Relive Sooner!
         </h1>
 
         {/* Description */}
         <p className="text-black text-lg mb-12 font-medium leading-relaxed max-w-lg mx-auto">
-          With Priority Processing, your enchanted memory will be created 2x
+          With Priority Processing, your enchanted memory will be created 3x
           faster so you can see the magic unfold almost instantly.
         </p>
 
@@ -90,8 +94,8 @@ function UpsalePage() {
               This exclusive offer is only available now
             </p>
             <p className="text-gray-600 text-xl mb-6">
-              Upgrade to skip the line and see your animated memory come to life
-              up to 3x faster - no waiting, just instant magic.
+              Upgrade to skip the line and see your <br /> animated memory come
+              to life up to 3x <br /> faster - no waiting, just instant magic.
             </p>
 
             <Link to="/best-deal">
@@ -108,10 +112,16 @@ function UpsalePage() {
           </div>
         </div>
 
+        <p className="text-center mt-10 -mb-8">
+          {" "}
+          <FaCheckCircle className="inline text-green-500 mr-2" /> Safe checkout
+          and 14-day money-back guarantee
+        </p>
         <div className="flex items-center justify-center gap-6 mt-8 max-w-2xl mx-auto">
-          <img src={Visa} alt="Visa" className="h-10 " />
+          {/* <img src={Visa} alt="Visa" className="h-10 " />
           <img src={Amex} alt="Amex" className="h-10 " />
-          <img src={Mastercard} alt="Mastercard" className="h-10 " />
+          <img src={Mastercard} alt="Mastercard" className="h-10 " /> */}
+          <img src="/payments.png" alt="" />
         </div>
       </div>
 
@@ -122,13 +132,13 @@ function UpsalePage() {
         </h2>
 
         <div className="space-y-8">
-          {/* Testimonial Card 1 */}
+          {/* Testimonial Card 1 - Sarah M. */}
           <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
             <div className="flex gap-6 items-start">
               {/* Profile Image */}
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150"
-                alt="Jonas"
+                src={sarah}
+                alt="Sarah M."
                 className="w-20 h-20 rounded-2xl object-cover flex-shrink-0"
               />
 
@@ -136,8 +146,10 @@ function UpsalePage() {
               <div className="flex-1">
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="font-bold text-gray-900 text-lg">Jonas</h3>
-                    <p className="text-gray-600 text-sm">Munich, Germany</p>
+                    <h3 className="font-bold text-gray-900 text-lg">
+                      Sarah M.
+                    </h3>
+                    <p className="text-gray-600 text-sm">London, UK</p>
                     <div className="flex items-center gap-1 mt-2">
                       <FaCheck className="w-4 h-4 text-blue-500" />
                       <span className="text-xs text-gray-600 font-medium">
@@ -156,20 +168,21 @@ function UpsalePage() {
 
                 {/* Testimonial Text */}
                 <p className="text-gray-700 leading-relaxed">
-                  "I uploaded a faded childhood photo, and FlashbackAI made it
-                  feel real again. I didn't expect to get this emotional."
+                  "Seeing my grandfather smile and move again after 40 years… I
+                  cried instantly. It felt like a moment I never thought I'd get
+                  back."
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Testimonial Card 2 */}
+          {/* Testimonial Card 2 - Marco D. */}
           <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
             <div className="flex gap-6 items-start">
               {/* Profile Image */}
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150"
-                alt="Jonas"
+                src={marco}
+                alt="Marco D."
                 className="w-20 h-20 rounded-2xl object-cover flex-shrink-0"
               />
 
@@ -177,8 +190,10 @@ function UpsalePage() {
               <div className="flex-1">
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="font-bold text-gray-900 text-lg">Jonas</h3>
-                    <p className="text-gray-600 text-sm">Munich, Germany</p>
+                    <h3 className="font-bold text-gray-900 text-lg">
+                      Marco D.
+                    </h3>
+                    <p className="text-gray-600 text-sm">Florence, Italy</p>
                     <div className="flex items-center gap-1 mt-2">
                       <FaCheck className="w-4 h-4 text-blue-500" />
                       <span className="text-xs text-gray-600 font-medium">
@@ -197,20 +212,20 @@ function UpsalePage() {
 
                 {/* Testimonial Text */}
                 <p className="text-gray-700 leading-relaxed">
-                  "I uploaded a faded childhood photo, and FlashbackAI made it
-                  feel real again. I didn't expect to get this emotional."
+                  "When the photo of my grandparents came alive, I literally
+                  gasped. FlashbackAI created a moment I didn't know I needed."
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Testimonial Card 3 */}
+          {/* Testimonial Card 3 - Hannah P. */}
           <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
             <div className="flex gap-6 items-start">
               {/* Profile Image */}
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150"
-                alt="Jonas"
+                src={hannah}
+                alt="Hannah P."
                 className="w-20 h-20 rounded-2xl object-cover flex-shrink-0"
               />
 
@@ -218,8 +233,10 @@ function UpsalePage() {
               <div className="flex-1">
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="font-bold text-gray-900 text-lg">Jonas</h3>
-                    <p className="text-gray-600 text-sm">Munich, Germany</p>
+                    <h3 className="font-bold text-gray-900 text-lg">
+                      Hannah P.
+                    </h3>
+                    <p className="text-gray-600 text-sm">Sydney, Australia</p>
                     <div className="flex items-center gap-1 mt-2">
                       <FaCheck className="w-4 h-4 text-blue-500" />
                       <span className="text-xs text-gray-600 font-medium">
@@ -238,8 +255,9 @@ function UpsalePage() {
 
                 {/* Testimonial Text */}
                 <p className="text-gray-700 leading-relaxed">
-                  "I uploaded a faded childhood photo, and FlashbackAI made it
-                  feel real again. I didn't expect to get this emotional."
+                  "Seeing my grandfather smile and move again after 40 years… I
+                  cried instantly. It felt like a moment I never thought I'd get
+                  back."
                 </p>
               </div>
             </div>

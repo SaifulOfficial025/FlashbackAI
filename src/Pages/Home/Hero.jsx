@@ -4,63 +4,56 @@ import Button from "../../Shared/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoShieldHalfSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import trusted from "../../../public/trusted.png";
 
 function Hero() {
   const navigate = useNavigate();
   return (
-    <section className="bg-white py-12 md:py-20">
-      <div className="max-w-full mx-12 px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+    <section className="bg-white py-8 sm:py-10 md:py-20">
+      <div className="max-w-full mx-2 sm:mx-4 md:mx-12 px-2 sm:px-4 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+          <div className="space-y-5 sm:space-y-6">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Every Photo Has a Story.
             </h1>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#785d26] leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-[#785d26] leading-tight">
               We Bring It Back to Life.
             </h1>
 
-            <div className="flex items-center gap-3 bg-gray-50 px-4 py-3 rounded-full w-fit border-2 border-gray-400">
-              <div className="flex -space-x-2">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop"
-                  alt="User"
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop"
-                  alt="User"
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop"
-                  alt="User"
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                />
-              </div>
-              <span className="text-sm font-medium text-gray-800">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 bg-gray-50 px-3 sm:px-4 py-2 sm:py-3 rounded-full w-fit border-2 border-gray-400">
+              <img
+                src={trusted}
+                alt="Trusted"
+                className="w-8 h-8 sm:w-auto sm:h-auto"
+              />
+              <span className="text-xs sm:text-sm font-medium text-gray-800">
                 Excellent
               </span>
-              <div className="flex items-center text-amber-400 gap-1">
+              <div className="flex items-center text-amber-400 gap-0.5 sm:gap-1">
                 <BsStarFill className="text-xs" />
                 <BsStarFill className="text-xs" />
                 <BsStarFill className="text-xs" />
                 <BsStarFill className="text-xs" />
                 <BsStarFill className="text-xs" />
               </div>
-              <span className="text-sm font-semibold text-gray-800">4.7</span>
-              <span className="text-sm text-gray-600">2,487 Happy Users</span>
+              <span className="text-xs sm:text-sm font-semibold text-gray-800">
+                4.7
+              </span>
+              <span className="text-xs sm:text-sm text-gray-600">
+                2,487 Happy Users
+              </span>
             </div>
-            <p className="text-xl text-black leading-relaxed">
-              Transform your static memories into dynamic moments. With
-              FlashbackAI, restore motion and spirit to cherished photographs,
-              allowing them to be experienced in a whole new way.
+            <p className="text-base sm:text-lg md:text-xl text-black leading-relaxed">
+              Turn your cherished photos into living memories. FlashbackAI
+              gently reanimates the moments you love, bringing you closer to the
+              stories behind every image.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-2 sm:pt-4">
               <Button
                 variant="primary"
                 size="lg"
-                className=" hover:bg-amber-800 text-white px-8 py-3 rounded-full"
+                className="w-full sm:w-auto hover:bg-amber-800 text-white px-4 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base"
                 onClick={() => navigate("/flashback")}
               >
                 <span className="inline-flex items-center justify-center bg-amber-900/20 rounded-full p-1 text-sm">
@@ -69,67 +62,82 @@ function Hero() {
                 <span>Try Now — Bring My Photo to Life</span>
               </Button>
             </div>
-            <div className="flex items-center">
-              <IoShieldHalfSharp className="inline-block mr-2 text-gray-600 w-5 h-5" />
+            <div className="flex items-center text-xs sm:text-base mt-2">
+              <IoShieldHalfSharp className="inline-block mr-2 text-gray-600 w-4 h-4 sm:w-5 sm:h-5" />
               <p>100% Private — Encrypted, Secure & Always Yours.</p>
             </div>
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex justify-center md:justify-end mt-8 md:mt-0">
             <img
-              src="/Herosideimg.png"
+              src="/herogif.gif"
               alt="Hero side image"
-              className="w-full max-w-xl h-auto rounded-lg"
+              className="w-64 sm:w-80 md:w-96 max-w-xs sm:max-w-md md:max-w-xl rounded-lg"
             />
           </div>
         </div>
 
-        <div className="mt-16 md:mt-24 border-t pt-12">
-          <p className="text-center text-md font-bold text-[#785d26] mb-6 uppercase tracking-wider">
+        <div className="mt-10 sm:mt-14 md:mt-24 border-t pt-8 sm:pt-10 md:pt-12">
+          <p className="text-center text-xs sm:text-md font-bold text-[#785d26] mb-4 sm:mb-6 uppercase tracking-wider">
             As seen on
           </p>
-          <div className="flex justify-center items-center">
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
             <img
-              src="/newsbrand.png"
-              alt="Featured in news and brands"
-              className="w-full max-w-4xl h-auto"
+              src="/newyork.png"
+              alt="New York"
+              className="h-10 sm:h-16 md:h-20 object-contain hover:scale-105 transition-transform duration-300"
+            />
+            <img
+              src="/bbc.png"
+              alt="BBC"
+              className="h-10 sm:h-16 md:h-20 object-contain hover:scale-105 transition-transform duration-300"
+            />
+            <img
+              src="/healthline.png"
+              alt="Healthline"
+              className="h-10 sm:h-16 md:h-20 object-contain hover:scale-105 transition-transform duration-300"
+            />
+            <img
+              src="/businessinsider.jpg"
+              alt="Business Insider"
+              className="h-10 sm:h-16 md:h-20 object-contain hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
       </div>
 
-      <div className="bg-[#785d26] py-12 md:py-16 mt-12">
-        <div className="max-w-full mx-12 px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl p-6 flex items-center gap-4">
+      <div className="bg-[#785d26] py-8 sm:py-10 md:py-16 mt-8 sm:mt-10 md:mt-12">
+        <div className="max-w-full mx-2 sm:mx-4 md:mx-12 px-2 sm:px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="bg-white rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center gap-2 sm:gap-4">
               <img
                 src="/heroicon1.png"
                 alt="Fast"
-                className="w-16 h-16 flex-shrink-0"
+                className="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0"
               />
-              <p className="text-lg font-semibold text-gray-900">
+              <p className="text-base sm:text-lg font-semibold text-gray-900 text-center">
                 Only 60 seconds to begin your memory journey
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 flex items-center gap-4">
+            <div className="bg-white rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center gap-2 sm:gap-4">
               <img
                 src="/heroicon2.png"
                 alt="Love"
-                className="w-16 h-16 flex-shrink-0"
+                className="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0"
               />
-              <p className="text-lg font-semibold text-gray-900">
+              <p className="text-base sm:text-lg font-semibold text-gray-900 text-center">
                 Created with love for your most meaningful moments
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 flex items-center gap-4">
+            <div className="bg-white rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center gap-2 sm:gap-4">
               <img
                 src="/heroicon3.png"
                 alt="Easy"
-                className="w-16 h-16 flex-shrink-0"
+                className="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0"
               />
-              <p className="text-lg font-semibold text-gray-900">
+              <p className="text-base sm:text-lg font-semibold text-gray-900 text-center">
                 Designed for everyone, no tech skills needed
               </p>
             </div>

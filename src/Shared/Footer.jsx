@@ -22,7 +22,7 @@ function Footer() {
         <hr className="border-gray-400 my-6" />
 
         <div className="text-xs text-white">
-          <div>© 2024 FlashbackAI. All rights reserved.</div>
+          <div>© 2026 FlashbackAI. All rights reserved.</div>
           <div className="mt-2 flex items-center justify-center gap-4">
             <a href="#contact" className="hover:underline">
               contact us

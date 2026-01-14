@@ -32,13 +32,13 @@ function Result() {
             <span className="text-white text-base md:text-lg mb-1">
               Happy user
             </span>
-            <span className="text-4xl md:text-6xl  text-white">1,20,00</span>
+            <span className="text-4xl md:text-6xl  text-white">18,000+</span>
           </div>
           <div className="flex-1 flex flex-col items-start">
             <span className="text-white text-base md:text-lg mb-1">
               vedios create daily
             </span>
-            <span className="text-4xl md:text-6xl  text-white">2,000+</span>
+            <span className="text-4xl md:text-6xl  text-white">1200+</span>
           </div>
           <div className="flex-1 flex flex-col items-start">
             <span className="text-white text-base md:text-lg mb-1">

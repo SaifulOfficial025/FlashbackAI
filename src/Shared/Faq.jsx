@@ -8,27 +8,27 @@ const faqs = [
   },
   {
     q: "How long does it take?",
-    a: "Most videos are generated in under 30 seconds with our optimized AI processing.",
+    a: "Most videos are generated in under 30 seconds with our optimized AI processing. More complex animations may take up to 60 seconds depending on your photo quality and selected style.",
   },
   {
     q: "Can I choose the animation style?",
-    a: "Yes! You can select from cinematic, nostalgic, or custom motion styles to fit your memory best.",
+    a: "Yes! You can choose from cinematic, nostalgic, gentle movement, or natural lifelike motion styles. Each style is designed to respect the emotional value of your photos while bringing them to life.",
   },
   {
     q: "Is my photo safe?",
-    a: "Your photos are encrypted and automatically deleted after processing for your privacy.",
+    a: "Absolutely. Your photos are encrypted during upload and processing. We automatically delete all photos from our servers after 24 hours, and you can manually delete them at any time. Your privacy is our top priority.",
   },
   {
     q: "Can I download/share my video?",
-    a: "Absolutely! You can download your video in HD or share it directly with friends and family.",
+    a: "Yes! Once your video is generated, you can download it in high quality and share it with anyone you love. Your videos are yours to keep forever.",
   },
   {
     q: "Will old photos work?",
-    a: "Yes, FlashbackAI works beautifully with vintage and even damaged photographs.",
+    a: "Yes! FlashbackAI works beautifully with vintage, faded, and even damaged photographs. Our AI is specifically trained to handle old family photos with care and respect.",
   },
   {
     q: "Is it compatible with all devices?",
-    a: "You can create and view videos on any device — desktop, tablet, or mobile.",
+    a: "Absolutely! FlashbackAI works on any device — desktop computers, tablets, and mobile phones. Create and view your memory videos anywhere, anytime.",
   },
 ];
 

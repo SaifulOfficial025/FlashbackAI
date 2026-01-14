@@ -59,18 +59,19 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
       <p className="text-gray-500 mb-8">
         {requiresTwoImages
           ? "Upload two images of people to create your memory"
-          : "Upload a spatial memory to begin the magic"}
+          : "Upload a special memory to begin the magic."}
       </p>
 
       {/* Social Proof Badge */}
       <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 shadow-sm mb-8">
         <div className="flex -space-x-2">
-          {[1, 2, 3].map((i) => (
+          <img src="/trusted.png" alt="" />
+          {/* {[1, 2, 3].map((i) => (
             <div
               key={i}
               className="w-6 h-6 rounded-full bg-gray-200 border-2 border-white"
             />
-          ))}
+          ))} */}
         </div>
         <span className="text-xs font-bold text-gray-600">Excellent</span>
         <div className="flex text-primary gap-2 scale-75">
@@ -79,7 +80,7 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
           ))}
         </div>
         <span className="text-xs text-black font-medium">
-          4.7 | 2,487 Happy Users
+          <span className="font-bold">4.7 </span> | 2,487 Happy Users
         </span>
       </div>
 
@@ -129,7 +130,7 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
           </>
         ) : (
           <div className="space-y-4">
-            <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+            <div className="grid grid-cols-2 gap-4 max-w-md mx-auto ">
               {uploadedFiles.map((file, index) => (
                 <div key={index} className="relative group/item">
                   <img
@@ -171,8 +172,10 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
                 onClick={onNext}
                 className="bg-[#7c602e] text-white px-10 py-2.5 rounded-xl text-sm font-semibold shadow-md hover:bg-[#6b5127] transition-colors mt-6"
               >
-                Continue with {uploadedFiles.length}{" "}
-                {uploadedFiles.length === 1 ? "photo" : "photos"}
+                Continue
+                {/* with */}
+                {/* {uploadedFiles.length}{" "} */}
+                {/* {uploadedFiles.length === 1 ? "photo" : "photos"} */}
               </button>
             )}
           </div>
@@ -202,8 +205,8 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
       )}
 
       <div className="flex items-center justify-center gap-2 text-[10px] text-gray-400 uppercase tracking-widest bg-gray-50/50 py-3 rounded-full border border-gray-100">
-        <Check size={14} className="text-green-500 stroke-[3px]" /> Private &
-        Secure — Your photo never leaves our encrypted system
+        <Check size={14} className="text-green-500 stroke-[3px]" /> AI-guided
+        animation styles - no guesswork
       </div>
     </div>
   );
