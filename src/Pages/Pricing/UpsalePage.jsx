@@ -19,7 +19,7 @@ function UpsalePage() {
       {/* Header */}
       <header className="py-8 text-center border-b border-gray-100 bg-white">
         <span className="text-2xl font-serif font-bold text-[#7c602e] tracking-tight">
-          FlashbackAI
+          PureMotion
         </span>
       </header>
 
@@ -49,26 +49,27 @@ function UpsalePage() {
 
         {/* Description */}
         <p className="text-black text-lg mb-12 font-medium leading-relaxed max-w-lg mx-auto">
-          With Priority Processing, your enchanted memory will be created 3x
-          faster so you can see the magic unfold almost instantly.
+          With Priority Processing, your enchanted memory will be created{" "}
+          <span className="font-bold">3x faster</span> so you can see the magic
+          unfold almost instantly.
         </p>
 
         {/* Benefits List */}
         <div className="space-y-4 mb-12 max-w-md mx-auto text-left">
           <div className="flex items-center gap-4 p-4  rounded-xl  hover:shadow-md transition-shadow">
-            <FaCheck className="text-[#785d26] text-xl flex-shrink-0" />
+            <FaCheck className="text-[#634910] text-xl flex-shrink-0" />
             <span className="text-gray-700 font-semibold">
-              Results up to 3X faster
+              Results up to <span className="font-bold">3x faster</span>
             </span>
           </div>
           <div className="flex items-center gap-4 p-4  rounded-xl  hover:shadow-md transition-shadow">
-            <FaCheck className="text-[#785d26] text-xl flex-shrink-0" />
+            <FaCheck className="text-[#634910] text-xl flex-shrink-0" />
             <span className="text-gray-700 font-semibold">
-              Perlect lor lau-minude gilts or emotional reveals
+              Perfect for last minute gifts or emotional reveals
             </span>
           </div>
           <div className="flex items-center gap-4 p-4  rounded-xl  hover:shadow-md transition-shadow">
-            <FaCheck className="text-[#785d26] text-xl flex-shrink-0" />
+            <FaCheck className="text-[#634910] text-xl flex-shrink-0" />
             <span className="text-gray-700 font-semibold">
               Works with every animation style
             </span>
@@ -76,7 +77,7 @@ function UpsalePage() {
         </div>
       </main>
 
-      <div className="max-w-5xl mx-auto px-6 mt-12">
+      <div className="max-w-5xl mx-auto px-6 -mt-10">
         <div className="relative">
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
             <span className="bg-[#7c602e] text-white px-3 py-1 rounded-full text-md font-bold">
@@ -86,16 +87,17 @@ function UpsalePage() {
 
           <div className="bg-white border border-gray-100 rounded-2xl py-8 px-6 text-center shadow-sm mt-6">
             <h3 className="text-3xl font-semibold mb-1">
-              Todays only : <span className="font-bold">$9.99</span>
+              Todays only : <span className="font-bold">$4.99</span>
             </h3>
-            <p className="text-gray-400 text-md mb-4">Regular price: $18</p>
+            <p className="text-gray-400 text-md mb-4">Regular price: $19.96</p>
 
             <p className="font-semibold text-xl mb-2">
               This exclusive offer is only available now
             </p>
             <p className="text-gray-600 text-xl mb-6">
               Upgrade to skip the line and see your <br /> animated memory come
-              to life up to 3x <br /> faster - no waiting, just instant magic.
+              to life up to <span className="font-bold">3x faster</span> <br />-
+              no waiting, just instant magic.
             </p>
 
             <Link to="/best-deal">
@@ -112,10 +114,10 @@ function UpsalePage() {
           </div>
         </div>
 
-        <p className="text-center mt-10 -mb-8">
+        <p className="text-center mt-10 -mb-8 font-bold">
           {" "}
-          <FaCheckCircle className="inline text-green-500 mr-2" /> Safe checkout
-          and 14-day money-back guarantee
+          <FaCheckCircle className="inline text-green-500 mr-2 " /> Safe
+          checkout and 14-day money-back guarantee
         </p>
         <div className="flex items-center justify-center gap-6 mt-8 max-w-2xl mx-auto">
           {/* <img src={Visa} alt="Visa" className="h-10 " />
@@ -161,16 +163,16 @@ function UpsalePage() {
                   {/* Star Rating */}
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} className="w-5 h-5 text-[#c9a661]" />
+                      <FaStar key={i} className="w-5 h-5 text-[#634910]" />
                     ))}
                   </div>
                 </div>
 
                 {/* Testimonial Text */}
                 <p className="text-gray-700 leading-relaxed">
-                  "Seeing my grandfather smile and move again after 40 years… I
+                  Seeing my grandfather smile and move again after 40 years… I
                   cried instantly. It felt like a moment I never thought I'd get
-                  back."
+                  back.
                 </p>
               </div>
             </div>
@@ -205,15 +207,15 @@ function UpsalePage() {
                   {/* Star Rating */}
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} className="w-5 h-5 text-[#c9a661]" />
+                      <FaStar key={i} className="w-5 h-5 text-[#634910]" />
                     ))}
                   </div>
                 </div>
 
                 {/* Testimonial Text */}
                 <p className="text-gray-700 leading-relaxed">
-                  "When the photo of my grandparents came alive, I literally
-                  gasped. FlashbackAI created a moment I didn't know I needed."
+                  When the photo of my grandparents came alive, I literally
+                  gasped. PureMotion created a moment I didn't know I needed.
                 </p>
               </div>
             </div>
@@ -248,16 +250,17 @@ function UpsalePage() {
                   {/* Star Rating */}
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} className="w-5 h-5 text-[#c9a661]" />
+                      <FaStar key={i} className="w-5 h-5 text-[#634910]" />
                     ))}
                   </div>
                 </div>
 
                 {/* Testimonial Text */}
                 <p className="text-gray-700 leading-relaxed">
-                  "Seeing my grandfather smile and move again after 40 years… I
-                  cried instantly. It felt like a moment I never thought I'd get
-                  back."
+                  I animated an old photo of my childhood dog, Max. Seeing him
+                  move again, that little head tilt, his gentle expression, it
+                  brought me to tears. It felt like having a moment with him
+                  again.
                 </p>
               </div>
             </div>

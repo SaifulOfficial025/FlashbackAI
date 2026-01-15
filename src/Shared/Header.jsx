@@ -12,8 +12,8 @@ function Header() {
   return (
     <>
       {/* Top Bar Responsive */}
-      <div className="bg-[#785d26] text-white text-sm ">
-        <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between px-2 sm:px-4 py-1 gap-1 sm:gap-0">
+      <div className="bg-[#634910] text-white text-sm ">
+        <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between px-2 sm:px-4 py-0.5 gap-1 sm:gap-0">
           <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center sm:justify-start">
             <span>3 Easy Steps</span>
           </div>
@@ -29,12 +29,16 @@ function Header() {
             <span className="hidden xs:inline">
               Thousands of Happy Customers
             </span>
-            <span className="inline xs:hidden text-xs">Happy Customers</span>
+            <span className="inline xs:hidden text-xs">
+              Thousands of Happy Customers
+            </span>
           </div>
 
           <div className="w-full sm:w-auto flex justify-center sm:justify-end mt-1 sm:mt-0">
             <span className="hidden xs:inline">Encrypted &amp; Secure</span>
-            <span className="inline xs:hidden text-xs">Secure</span>
+            <span className="inline xs:hidden text-xs">
+              Encrypted &amp; Secure
+            </span>
           </div>
         </div>
       </div>
@@ -46,7 +50,7 @@ function Header() {
             <div className="flex items-center gap-2 sm:gap-3">
               <img
                 src="/logo.png"
-                alt="FlashbackAI logo"
+                alt="PureMotion logo"
                 className="h-7 sm:h-8 w-auto"
               />
             </div>

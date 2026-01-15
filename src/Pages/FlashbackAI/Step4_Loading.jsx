@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
+import { BsFillStarFill } from "react-icons/bs";
+import { MdVerified } from "react-icons/md";
+import elise from "../../../public/Elise D.jpg";
+import liam from "../../../public/Liam G..jpg";
 
 export const Step4_Loading = ({ onNext }) => {
   const [progress, setProgress] = useState(0);
@@ -34,23 +38,79 @@ export const Step4_Loading = ({ onNext }) => {
 
   return (
     <div className="max-w-2xl mx-auto text-center py-8">
-      {/* --- TESTIMONIAL --- */}
-      <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 mb-16 relative text-left">
-        <div className="flex gap-4 items-start">
-          <Heart
-            size={20}
-            fill="#facc15"
-            className="text-yellow-400 mt-1 flex-shrink-0"
-          />
-          <p className="text-gray-700 leading-relaxed italic font-medium">
-            "I animated an old photo of my childhood dog, Max. Seeing him move
-            again — that little head tilt, his gentle expression — it brought me
-            to tears. It felt like having a moment with him again."
+      {/* --- TESTIMONIALS --- */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 max-w-3xl mx-auto">
+        {/* Card 4 - Elise D. */}
+        <div
+          className="bg-[#f2ebe2] rounded-2xl shadow p-5 flex flex-col border border-[#e5e0d6] relative min-h-[320px]"
+          style={{ boxShadow: "0 2px 12px 0 rgba(60, 40, 10, 0.07)" }}
+        >
+          <div className="flex items-center mb-2 mt-2">
+            {[...Array(5)].map((_, idx) => (
+              <BsFillStarFill
+                key={idx}
+                className="text-[#634910] text-base mr-1"
+              />
+            ))}
+          </div>
+          <p className="text-gray-800 text-[15px] mb-4 flex-1">
+            "I surprised my friend with this to bring their family photo to
+            life. We didn't expect such an emotional reaction."
           </p>
+          <div className="border-t border-[#e5e0d6] pt-3 flex items-center gap-3 mt-auto">
+            <img
+              src={elise}
+              alt="Elise D."
+              className="w-9 h-9 rounded-full object-cover border-2 border-white shadow"
+            />
+            <div>
+              <span className="font-semibold text-gray-900 block leading-tight">
+                Elise D.
+              </span>
+              <span className="text-xs text-gray-500 block">Paris, France</span>
+              <span className="flex items-center text-xs text-[#1da1f2] mt-1 font-medium">
+                <MdVerified className="mr-1 text-base" /> Verified user
+              </span>
+            </div>
+          </div>
         </div>
-        <p className="mt-4 text-[11px] font-bold text-gray-400 ml-9 tracking-wide uppercase">
-          — Sarah M., New York
-        </p>
+
+        {/* Card 6 - Liam G. */}
+        <div
+          className="bg-[#f2ebe2] rounded-2xl shadow p-5 flex flex-col border border-[#e5e0d6] relative min-h-[320px]"
+          style={{ boxShadow: "0 2px 12px 0 rgba(60, 40, 10, 0.07)" }}
+        >
+          <div className="flex items-center mb-2 mt-2">
+            {[...Array(5)].map((_, idx) => (
+              <BsFillStarFill
+                key={idx}
+                className="text-[#634910] text-base mr-1"
+              />
+            ))}
+          </div>
+          <p className="text-gray-800 text-[15px] mb-4 flex-1">
+            "The realism is unbelievable. PureMotion turned a simple photo into
+            something my family will treasure forever."
+          </p>
+          <div className="border-t border-[#e5e0d6] pt-3 flex items-center gap-3 mt-auto">
+            <img
+              src={liam}
+              alt="Liam G."
+              className="w-9 h-9 rounded-full object-cover border-2 border-white shadow"
+            />
+            <div>
+              <span className="font-semibold text-gray-900 block leading-tight">
+                Liam G.
+              </span>
+              <span className="text-xs text-gray-500 block">
+                Toronto, Canada
+              </span>
+              <span className="flex items-center text-xs text-[#1da1f2] mt-1 font-medium">
+                <MdVerified className="mr-1 text-base" /> Verified user
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* --- RADIAL LOADER --- */}

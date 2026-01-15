@@ -57,7 +57,7 @@ export const Step5_Login = ({ onNext }) => {
       <AnnouncementBar />
       <header className="px-6 md:px-12 py-6 flex items-center justify-center mb-10 border-b border-gray-100 bg-white/70 backdrop-blur-md sticky top-0 z-50">
         <div className="text-2xl font-serif tracking-tight text-[#7c602e] font-bold">
-          FlashbackAI
+          PureMotion
         </div>
       </header>
       {/* Heading */}

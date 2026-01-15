@@ -13,7 +13,7 @@ export const Topbar = () => {
         {" "}
         {/* Align logo with sidebar width */}
         <span className="text-xl font-serif font-bold text-[#7c602e] tracking-tight">
-          FlashbackAI
+          PureMotion
         </span>
       </div>
 

@@ -9,17 +9,17 @@ export default function BestDeal() {
     >
       <div className="max-w-3xl mx-auto text-center pt-24 pb-32 px-6">
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-6 mt-20">
-          Unlock the Best Deal: 200 Credit
+          Unlock the Best Deal: 50 Credit
           <br />
-          for only A$179.90!
+          for only $39.00!
         </h1>
         <p className="text-white/90 text-lg font-medium mb-6">
-          Upgrade your experience with our best-value coin bundle.
+          Upgrade your experience with our best-value credit bundle.
         </p>
         <p className="text-white/80 text-sm max-w-2xl mx-auto mb-8">
-          Get 200 Credit for just A$179.90 - that's 60% more value compared to
-          the smaller pack. Whether you're diving deep or coming back for more,
-          this is the smartest way to power up.
+          Get 50 Credit for just $39.00 - that's 60% more value compared to the
+          smaller pack. Whether you're diving deep or coming back for more, this
+          is the smartest way to power up.
         </p>
 
         {/* Card */}
@@ -31,23 +31,23 @@ export default function BestDeal() {
           </div>
 
           <div className="text-center mt-3">
-            <div className="text-sm text-gray-500 line-through">A$60</div>
+            <div className="text-sm text-gray-500 line-through">$97.50</div>
             <div className="text-2xl font-bold text-gray-900">
-              A$120{" "}
+              $39{" "}
               <span className="text-sm text-red-500 font-semibold">
-                50% OFF
+                60% OFF
               </span>
             </div>
           </div>
 
           <p className="text-center text-gray-600 text-sm mt-4 mb-6">
-            Elevate your experience - get more Credit and do more with every
+            Elevate your experience - get more credit and do more with every
             moment.
           </p>
 
           <div className="flex flex-col items-center gap-3">
             <button className="bg-[#7c602e] text-white px-10 py-3 rounded-full font-semibold shadow hover:bg-[#6b5127] transition-colors">
-              Upgrade & Save Big00
+              Upgrade & Save Big
             </button>
             <Link to="/dashboard">
               <button className="text-sm text-gray-700 underline">
@@ -62,7 +62,7 @@ export default function BestDeal() {
           {/* <img src="/master.png" alt="master" className="h-6" />
           <img src="/visa.png" alt="visa" className="h-6" />
           <img src="/amex.png" alt="amex" className="h-6" /> */}
-          <img src="/payments.png" alt="" />
+          <img src="/payments.png" alt="" className="h-14" />
           {/* <span className="text-sm text-gray-600">Pay</span> */}
         </div>
       </div>

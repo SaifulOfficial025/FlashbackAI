@@ -26,7 +26,7 @@ const testimonials = [
     after: "/loved2.png",
     avatar: marco,
     stars: 5,
-    text: "When the photo of my grandparents came alive, I literally gasped. FlashbackAI created a moment I didn’t know I needed.",
+    text: "When the photo of my grandparents came alive, I literally gasped. PureMotion created a moment I didn’t know I needed.",
     name: "Marco D.",
     location: "Florence, Italy",
     verified: true,
@@ -36,7 +36,7 @@ const testimonials = [
     after: "/loved3.png",
     avatar: hannah,
     stars: 5,
-    text: "Seeing my grandfather smile and move again after 40 years… I cried instantly. It felt like a moment I never thought I’d get back.",
+    text: "I animated an old photo of my childhood dog, Max. Seeing him move again, that little head tilt, his gentle expression, it brought me to tears. It felt like having a moment with him again.",
     name: "Hannah P.",
     location: "Sydney, Australia",
     verified: true,
@@ -56,7 +56,7 @@ const testimonials = [
     after: "/loved5.png",
     avatar: jonas,
     stars: 5,
-    text: "I uploaded a faded childhood photo, and FlashbackAI made it feel real again. I didn’t expect to get this emotional.",
+    text: "I uploaded a faded childhood photo, and PureMotion made it feel real again. I didn’t expect to get this emotional.",
     name: "Jonas K.",
     location: "Munich, Germany",
     verified: true,
@@ -66,7 +66,7 @@ const testimonials = [
     after: "/loved6.png",
     avatar: liam,
     stars: 5,
-    text: "The realism is unbelievable. FlashbackAI turned a simple photo into something my family will treasure forever.",
+    text: "The realism is unbelievable. PureMotion turned a simple photo into something my family will treasure forever.",
     name: "Liam G.",
     location: "Toronto, Canada",
     verified: true,
@@ -118,14 +118,12 @@ function LovedThousands() {
               {[...Array(t.stars)].map((_, idx) => (
                 <BsFillStarFill
                   key={idx}
-                  className="text-[#bfa76a] text-base mr-1"
+                  className="text-[#634910] text-base mr-1"
                 />
               ))}
             </div>
             {/* Quote */}
-            <p className="text-gray-800 text-[15px] italic mb-4 flex-1">
-              “{t.text}”
-            </p>
+            <p className="text-gray-800 text-[15px]  mb-4 flex-1">{t.text}</p>
             <div className="border-t border-[#e5e0d6] pt-3 flex items-center gap-3 mt-auto">
               <img
                 src={t.avatar}

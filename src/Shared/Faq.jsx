@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const faqs = [
   {
     q: "Do I need any technical skills?",
-    a: "Not at all! FlashbackAI is designed for everyone. Simply upload your photo, choose a style, and we handle the rest. The entire process is intuitive and takes less than a minute.",
+    a: "Not at all! PureMotion is designed for everyone. Simply upload your photo, choose a style, and we handle the rest. The entire process is intuitive and takes less than a minute.",
   },
   {
     q: "How long does it take?",
@@ -24,11 +24,11 @@ const faqs = [
   },
   {
     q: "Will old photos work?",
-    a: "Yes! FlashbackAI works beautifully with vintage, faded, and even damaged photographs. Our AI is specifically trained to handle old family photos with care and respect.",
+    a: "Yes! PureMotion works beautifully with vintage, faded, and even damaged photographs. Our AI is specifically trained to handle old family photos with care and respect.",
   },
   {
     q: "Is it compatible with all devices?",
-    a: "Absolutely! FlashbackAI works on any device — desktop computers, tablets, and mobile phones. Create and view your memory videos anywhere, anytime.",
+    a: "Absolutely! PureMotion works on any device — desktop computers, tablets, and mobile phones. Create and view your memory videos anywhere, anytime.",
   },
 ];
 

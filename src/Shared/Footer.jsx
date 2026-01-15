@@ -2,10 +2,10 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-[#785d26] text-amber-50">
+    <footer className="bg-[#634910] text-amber-50">
       <div className="max-w-full mx-auto text-center px-6 py-12">
         <h2 className="text-2xl md:text-3xl font-serif mb-4 font-bold">
-          FlashbackAI
+          PureMotion
         </h2>
 
         <p className="text-sm max-w-prose mx-auto leading-relaxed text-[#edd796">
@@ -22,7 +22,7 @@ function Footer() {
         <hr className="border-gray-400 my-6" />
 
         <div className="text-xs text-white">
-          <div>© 2026 FlashbackAI. All rights reserved.</div>
+          <div>© 2026 PureMotion. All rights reserved.</div>
           <div className="mt-2 flex items-center justify-center gap-4">
             <a href="#contact" className="hover:underline">
               contact us

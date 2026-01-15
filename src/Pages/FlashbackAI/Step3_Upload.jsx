@@ -56,7 +56,7 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
           ? "Upload two photos"
           : "Start with a photo you love"}
       </h1>
-      <p className="text-gray-500 mb-8">
+      <p className="text-black mb-8">
         {requiresTwoImages
           ? "Upload two images of people to create your memory"
           : "Upload a special memory to begin the magic."}
@@ -65,7 +65,7 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
       {/* Social Proof Badge */}
       <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 shadow-sm mb-8">
         <div className="flex -space-x-2">
-          <img src="/trusted.png" alt="" />
+          <img src="/trusted.png" alt="" className="h-8" />
           {/* {[1, 2, 3].map((i) => (
             <div
               key={i}
@@ -80,7 +80,8 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
           ))}
         </div>
         <span className="text-xs text-black font-medium">
-          <span className="font-bold">4.7 </span> | 2,487 Happy Users
+          <span className="font-bold">4.7 </span>{" "}
+          <span className="mx-2 text-gray-400">|</span> 2,487 Happy Users
         </span>
       </div>
 
@@ -197,14 +198,14 @@ export const Step3_Upload = ({ onNext, selectedTheme }) => {
           <p className="text-[#7c602e] font-bold mb-2">
             Start With Just One Photo
           </p>
-          <p className="text-xs text-gray-400 mb-8 max-w-xs mx-auto leading-relaxed">
+          <p className="text-xs text-black mb-8 max-w-xs mx-auto leading-relaxed">
             You can upload many more right after onboarding — this first photo
             simply helps us begin.
           </p>
         </>
       )}
 
-      <div className="flex items-center justify-center gap-2 text-[10px] text-gray-400 uppercase tracking-widest bg-gray-50/50 py-3 rounded-full border border-gray-100">
+      <div className="flex items-center justify-center gap-2 text-[10px] text-gray-700 font-bold uppercase tracking-widest bg-gray-50/50 py-3 rounded-full border border-gray-100">
         <Check size={14} className="text-green-500 stroke-[3px]" /> AI-guided
         animation styles - no guesswork
       </div>

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import React, { useState } from "react";
+import { Copy, Check } from "lucide-react";
 
 export const InviteFriendsPage = () => {
   const [copied, setCopied] = useState(false);
-  const referralLink = "https://flashbackai.com/ref/user123"; // Example link
+  const referralLink = "https://PureMotion.com/ref/user123"; // Example link
 
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink);
@@ -14,7 +14,6 @@ export const InviteFriendsPage = () => {
   return (
     <div className="flex-1 bg-[#fdfcfb] flex flex-col items-center justify-center p-6 md:p-12 animate-in fade-in duration-500">
       <div className="w-full max-w-2xl text-center">
-        
         {/* Headline */}
         <h1 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 leading-tight">
           Share The Magic, <br className="md:hidden" /> Earn Together ❤️
@@ -28,21 +27,20 @@ export const InviteFriendsPage = () => {
         {/* Description Box */}
         <div className="bg-white border border-gray-100 rounded-[2rem] p-6 md:p-8 mb-10 text-left shadow-sm">
           <p className="text-sm text-gray-400 leading-relaxed font-medium">
-            Spread the joy of bringing old photos to life. When your friend joins, 
-            they get 10 free credits to start - and you'll receive 10 credits 
-            as a thank you. A moment shared is a moment remembered.
+            Spread the joy of bringing old photos to life. When your friend
+            joins, they get 10 free credits to start - and you'll receive 10
+            credits as a thank you. A moment shared is a moment remembered.
           </p>
         </div>
 
         {/* Link & Share Section */}
         <div className="w-full max-w-md mx-auto space-y-6">
-          
           {/* Referral Link Input */}
           <div className="relative flex items-center">
             <div className="w-full bg-white border border-gray-200 rounded-full py-4 px-6 text-sm text-gray-400 font-medium flex items-center overflow-hidden">
               <span className="truncate">{referralLink}</span>
             </div>
-            <button 
+            <button
               onClick={handleCopy}
               className="absolute right-2 bg-white px-4 py-2 rounded-full text-xs font-bold text-[#7c602e] hover:bg-gray-50 transition-colors flex items-center gap-2"
             >
@@ -52,7 +50,7 @@ export const InviteFriendsPage = () => {
                   Copied
                 </>
               ) : (
-                'Copy'
+                "Copy"
               )}
             </button>
           </div>
@@ -62,7 +60,6 @@ export const InviteFriendsPage = () => {
             Share Now
           </button>
         </div>
-
       </div>
     </div>
   );

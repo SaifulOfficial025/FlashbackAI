@@ -104,8 +104,8 @@ export const Sidebar = ({ className }) => {
               <div className="bg-gray-100 p-2 rounded-lg">
                 <MessageSquare size={20} className="text-gray-600" />
               </div>
-              <p className="text-[12px] font-bold text-gray-700 leading-tight">
-                Get Free Credits by
+              <p className="text-[12px]  text-gray-700 leading-tight">
+                Get free credits by
                 <br /> completing survey
               </p>
             </div>

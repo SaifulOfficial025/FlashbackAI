@@ -30,19 +30,19 @@ function Result() {
         <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl mt-6">
           <div className="flex-1 flex flex-col items-start">
             <span className="text-white text-base md:text-lg mb-1">
-              Happy user
+              Happy Users Worldwide
             </span>
             <span className="text-4xl md:text-6xl  text-white">18,000+</span>
           </div>
           <div className="flex-1 flex flex-col items-start">
             <span className="text-white text-base md:text-lg mb-1">
-              vedios create daily
+              PureMotion Videos Created Daily
             </span>
             <span className="text-4xl md:text-6xl  text-white">1200+</span>
           </div>
           <div className="flex-1 flex flex-col items-start">
             <span className="text-white text-base md:text-lg mb-1">
-              satisfaction rate
+              Satisfaction Rate
             </span>
             <span className="text-4xl md:text-6xl  text-white">98%</span>
           </div>

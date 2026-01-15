@@ -3,13 +3,13 @@ import { BsStarFill } from "react-icons/bs";
 
 export default function AnnouncementBar() {
   return (
-    <div className="bg-[#785d26] text-white text-sm ">
-      <div className="max-w-2xl mx-auto flex items-center justify-between px-4 py-1 ">
-        <div className="flex items-center ">
+    <div className="bg-[#634910] text-white text-sm ">
+      <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between px-2 sm:px-4 py-0.5 gap-1 sm:gap-0">
+        <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center sm:justify-start">
           <span>3 Easy Steps</span>
         </div>
 
-        <div className="flex items-center ">
+        <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center sm:justify-center mt-1 sm:mt-0">
           <div className="flex items-center text-white space-x-0.5">
             <BsStarFill />
             <BsStarFill />
@@ -17,10 +17,18 @@ export default function AnnouncementBar() {
             <BsStarFill />
             <BsStarFill />
           </div>
-          <span>Thousands of Happy Customers</span>
+          <span className="hidden xs:inline">Thousands of Happy Customers</span>
+          <span className="inline xs:hidden text-xs">
+            Thousands of Happy Customers
+          </span>
         </div>
 
-        <div>Encrypted &amp; Secure</div>
+        <div className="w-full sm:w-auto flex justify-center sm:justify-end mt-1 sm:mt-0">
+          <span className="hidden xs:inline">Encrypted &amp; Secure</span>
+          <span className="inline xs:hidden text-xs">
+            Encrypted &amp; Secure
+          </span>
+        </div>
       </div>
     </div>
   );

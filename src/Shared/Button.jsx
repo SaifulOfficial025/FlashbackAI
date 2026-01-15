@@ -17,7 +17,7 @@ function Button({
     "inline-flex items-center justify-center font-medium rounded-full transition-colors focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
-    primary: "bg-[#785d26] text-white hover:bg-[#6b4e1f]",
+    primary: "bg-[#634910] text-white hover:bg-[#6b4e1f]",
     secondary: "bg-[#e9ddcf] text-black hover:bg-[#d6c9b8]",
     transparent: "bg-transparent text-black hover:bg-[#f0e9d2]",
     danger: "bg-red-600 text-white hover:bg-red-700",

@@ -6,7 +6,7 @@ const features = [
   {
     icon: "/whychoose1.png",
     title: "Lightning Fast",
-    desc: "Generate videos in under 30 seconds with our optimized AI processing.",
+    desc: "Generate videos in under 60 seconds with our optimized AI processing.",
   },
   {
     icon: "/whychoose2.png",
@@ -41,7 +41,7 @@ function WhyChoose() {
       {/* Heading */}
       <div className="w-full flex flex-col items-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">
-          Why Choose <span className="text-[#7A693B]">FlashbackAI</span>
+          Why Choose <span className="text-[#634910]">PureMotion</span>
         </h2>
         <p className="text-gray-700 text-lg text-center max-w-xl mb-1">
           Powerful Features &amp; Simple Experience
@@ -55,14 +55,16 @@ function WhyChoose() {
             className="bg-white rounded-2xl shadow p-6 flex flex-col border border-[#ece8e0] min-h-[150px] justify-start items-start transition hover:shadow-lg"
             style={{ boxShadow: "0 2px 8px 0 rgba(60, 40, 10, 0.07)" }}
           >
-            <div className="w-12 h-12 mb-3 flex items-center justify-center bg-[#e7dfd0] rounded-md">
-              <img
-                src={f.icon}
-                alt={f.title}
-                className="w-16 h-16 object-contain"
-              />
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-12 h-12 flex items-center justify-center bg-[#e7dfd0] rounded-md flex-shrink-0">
+                <img
+                  src={f.icon}
+                  alt={f.title}
+                  className="w-16 h-16 object-contain"
+                />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">{f.title}</h3>
             </div>
-            <h3 className="text-lg font-bold mb-1 text-gray-900">{f.title}</h3>
             <p className="text-gray-600 text-sm">{f.desc}</p>
           </div>
         ))}

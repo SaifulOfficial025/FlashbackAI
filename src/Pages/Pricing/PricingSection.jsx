@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaCheckCircle } from "react-icons/fa";
 import {
   Check,
   Star,
@@ -21,6 +22,7 @@ import FutureBabyImg from "../../../public/baby.jpeg";
 import WeddingImg from "../../../public/wedding.webp";
 import ValentineImg from "../../../public/valentine.jpg";
 import DogVideoImg from "../../../public/dog.jpg";
+import { BsStarFill } from "react-icons/bs";
 
 const themes = [
   {
@@ -81,32 +83,42 @@ const themes = [
 const packages = [
   {
     id: "weekly",
-    name: "Weekly Plan",
+    name: "Weekly Package",
     price: "$2.49",
     original: null,
     label: null,
     desc: "4 Credits Every Week",
+    credits: 4,
+    period: "Week",
   },
   {
     id: "family",
     name: "Fortnightly Package",
-    price: "$0.99",
-    original: "$2.49",
-    label: "MOST POPULAR PACKAGE",
-    desc: "4 Credits Every Week",
+    price: "$1.29",
+    original: "$3.23",
+    label: "SPECIAL OFFER 60% OFF",
+    desc: "15 Credits Every Fortnight",
+    credits: 15,
+    period: "Fortnight",
   },
   {
     id: "monthly",
     name: "Monthly Package",
-    price: "$0.87",
-    original: "$2.19",
+    price: "$0.99",
+    original: "$1.98",
     label: "BEST VALUE",
-    desc: "4 Credits Every Week",
+    desc: "30 Credits Every Month",
+    credits: 30,
+    period: "Month",
   },
 ];
 
 export const PricingSection = () => {
   const [selected, setSelected] = useState("family");
+
+  const selectedPackage = packages.find((pkg) => pkg.id === selected);
+  const priceAmount = parseFloat(selectedPackage.price.replace("$", ""));
+  const finalAmount = (priceAmount * selectedPackage.credits).toFixed(2);
 
   return (
     <section className="max-w-5xl mx-auto text-center py-12 px-4">
@@ -122,26 +134,36 @@ export const PricingSection = () => {
       </p>
 
       {/* Social Proof Mini */}
-      <div className=" items-center border border-primary px-4 py-2 rounded-full inline-flex justify-center gap-2 mb-10">
-        <div className="flex -space-x-1.5">
-          <img src="/trusted.png" alt="" />
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-3 sm:px-4 py-1 sm:py-2 rounded-full w-fit mx-auto border-2 border-[#E6D8C4]">
+        <img
+          src="/trusted.png"
+          alt="Trusted"
+          className="w-20 sm:w-20 sm:h-auto"
+        />
+        <span className="text-xs sm:text-sm font-medium text-[#634910]">
+          Excellent
+        </span>
+        <div className="flex items-center text-amber-400 gap-0.5 sm:gap-1">
+          <BsStarFill className="text-xs text-[#634910]" />
+          <BsStarFill className="text-xs text-[#634910]" />
+          <BsStarFill className="text-xs text-[#634910]" />
+          <BsStarFill className="text-xs text-[#634910]" />
+          <BsStarFill className="text-xs text-[#634910]" />
         </div>
-        <p className="text-md font-light">Excellent</p>
-        <div className="flex text-primary gap-1">
-          <Star size={12} fill="currentColor" />{" "}
-          <Star size={12} fill="currentColor" />{" "}
-          <Star size={12} fill="currentColor" />{" "}
-          <Star size={12} fill="currentColor" />{" "}
-          <Star size={12} fill="currentColor" />
-        </div>
-        <span className="text-[12px] text-black font-bold uppercase tracking-wider">
-          4.7 (2,487 Happy Users)
+        <span className="text-xs sm:text-sm font-semibold text-[#634910">
+          4.7
+        </span>
+        <span className="text-gray-400">|</span>
+        <span className="text-xs sm:text-sm text-[#634910]">
+          2,487 Happy Users
         </span>
       </div>
 
       {/* Features List */}
       <div className="text-left mb-12">
-        <h3 className="text-center font-bold text-lg mb-2">What's included?</h3>
+        <h3 className="text-center font-bold text-2xl mb-2 mt-5">
+          What's included?
+        </h3>
         <p className="text-center mb-10 text-lg">
           Everything you need to tum a single photo into a moment that feels
           alive again.
@@ -209,15 +231,21 @@ export const PricingSection = () => {
         {packages.map((pkg) => (
           <div key={pkg.id} className="relative group">
             {pkg.label && (
-              <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 z-10 bg-yellow-400 text-[9px] font-black px-3 py-0.5 rounded-full text-black whitespace-nowrap">
+              <div
+                className={`absolute -top-2.5 left-1/2 -translate-x-1/2 z-10 text-[12px] font-black px-3 py-0.5 rounded-full whitespace-nowrap ${
+                  pkg.label === "BEST VALUE"
+                    ? "bg-[#5FAF8E] text-white"
+                    : "bg-[#fdca17] text-black"
+                }`}
+              >
                 {pkg.label}
               </div>
             )}
             <label
               className={`flex items-center justify-between p-4 rounded-xl border-2 cursor-pointer transition-all ${
                 selected === pkg.id
-                  ? "border-yellow-400 bg-white ring-1 ring-yellow-400"
-                  : "border-gray-100 bg-white hover:border-gray-200"
+                  ? "border-2 border-[#634910] bg-white ring-1 ring-[#634910]"
+                  : " border-1 border-[#9c8f73] bg-white hover:border-[#7c602e]"
               }`}
             >
               <input
@@ -230,13 +258,11 @@ export const PricingSection = () => {
               <div className="flex items-center gap-3">
                 <div
                   className={`w-4 h-4 rounded-full border flex items-center justify-center ${
-                    selected === pkg.id
-                      ? "border-yellow-400"
-                      : "border-gray-300"
+                    selected === pkg.id ? "border-[#5FAF8E]" : "border-gray-300"
                   }`}
                 >
                   {selected === pkg.id && (
-                    <div className="w-2 h-2 rounded-full bg-yellow-400" />
+                    <div className="w-2 h-2 rounded-full bg-[#5FAF8E]" />
                   )}
                 </div>
                 <div className="text-left">
@@ -263,38 +289,27 @@ export const PricingSection = () => {
       </div>
 
       <Link to="/upsale">
-        <Button className="w-2/3 py-4 text-lg mb-4 uppercase">
+        <Button className="w-2/3 py-4 text-lg mb-4 uppercase font-extrabold">
           Claim Offer
         </Button>
       </Link>
-      <div className="flex items-center justify-center gap-1.5 text-[9px] text-gray-400 font-bold mb-4">
-        <Check size={10} className="text-green-500" /> SECURE CHECKOUT • 100%
-        SATISFACTION GUARANTEED
+      <div className="flex items-center justify-center gap-1.5 text-[14px] text-black font-bold mb-4">
+        <FaCheckCircle size={14} className="text-green-500" /> Safe checkout and
+        14-day money-back guarantee
       </div>
 
       {/* Payment Icons */}
       <div className="flex justify-center gap-3  mb-6">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
-          className="h-4"
-          alt="Visa"
-        />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-          className="h-6"
-          alt="Mastercard"
-        />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-          className="h-5"
-          alt="Paypal"
-        />
+        <img src="/payments.png" className="h-16" alt="Visa" />
       </div>
 
-      <p className="text-[9px] text-gray-400 leading-relaxed px-4">
-        By continuing, you agree to our Terms of Service and Privacy Policy.
-        Pricing is subject to local taxes where applicable. Subscriptions renew
-        automatically unless cancelled in settings 24h prior to period end.
+      <p className="text-[16px] text-gray-600 leading-relaxed px-4">
+        By clicking Claim Offer, I agree that the plan I have selected will
+        automatically renew until I cancel, Flashbackai will automatically
+        charge my payment method <strong>${finalAmount}</strong> every{" "}
+        <strong>{selectedPackage.period.toLowerCase()}</strong> thereafter until
+        I cancel. I can cancel online by visiting subscription page in my
+        account on website to avoid being charged for the next billing cycle
       </p>
     </section>
   );

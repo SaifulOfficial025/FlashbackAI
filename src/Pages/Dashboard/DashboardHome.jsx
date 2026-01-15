@@ -1,6 +1,7 @@
 import React from "react";
 import { ImagePlus, Upload } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const DashboardHome = () => {
   const navigate = useNavigate();
@@ -8,12 +9,14 @@ export const DashboardHome = () => {
     <div className="flex flex-col h-full bg-[#fdfcfb]/50">
       {/* Promo Banner */}
       <div className="bg-[#f2ede4]/60 p-3 flex justify-center items-center gap-6 border-b border-[#e5d5bc]/20">
-        <p className="text-[13px] font-medium text-gray-700">
-          Get free 10 Credit
-        </p>
-        <button className="bg-white px-4 py-1.5 rounded-full text-[11px] font-bold shadow-sm hover:shadow-md transition-all">
+        <Link to="/dashboard/survey" className="inline-block">
+          <p className="text-[13px] font-medium text-gray-700 bg-white/70 px-4 py-1.5 rounded-full shadow-sm hover:shadow-md transition-all">
+            Get free 10 Credits
+          </p>
+        </Link>
+        {/* <button className="bg-white px-4 py-1.5 rounded-full text-[11px] font-bold shadow-sm hover:shadow-md transition-all">
           Get fee Credit
-        </button>
+        </button> */}
       </div>
 
       {/* Main Empty State */}
@@ -36,7 +39,7 @@ export const DashboardHome = () => {
       >
         <button className="bg-[#7c602e] hover:bg-[#634d25] text-white w-full max-w-md py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-xl shadow-[#7c602e]/20 active:scale-[0.98] transition-all">
           {/* <Upload size={20} /> */}
-          <span>Make photo live</span>
+          <span>Create PureMotion</span>
         </button>
       </div>
     </div>

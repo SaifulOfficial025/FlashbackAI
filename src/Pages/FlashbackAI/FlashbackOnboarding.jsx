@@ -42,7 +42,7 @@ export default function FlashbackOnboarding() {
         </button>
 
         <div className="text-2xl font-serif tracking-tight text-[#7c602e] font-bold">
-          FlashbackAI
+          PureMotion
         </div>
 
         <div className="text-gray-400 text-sm font-bold tabular-nums">

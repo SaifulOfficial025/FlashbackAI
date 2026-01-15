@@ -55,7 +55,7 @@ function Questions() {
 
       <section className="space-y-3">
         <label className="text-md font-bold">
-          What best describes why you tried FlashbackAI?
+          What best describes why you tried PureMotion?
         </label>
         <div className="bg-white border rounded-lg p-4 space-y-2">
           {reasons.map((r) => (
@@ -76,7 +76,7 @@ function Questions() {
 
       <section className="space-y-3">
         <label className="text-md font-bold">
-          How easy was it to understand what FlashbackAI does?
+          How easy was it to understand what PureMotion does?
         </label>
         <div className="bg-white border rounded-lg p-4 space-y-2">
           {[
@@ -160,7 +160,7 @@ function Questions() {
       <div>
         <section className="space-y-2 mb-6">
           <label className="text-sm font-bold">
-            If you could change ONE thing about FlashbackAI, what would it be?
+            If you could change ONE thing about PureMotion, what would it be?
           </label>
           <textarea
             value={improvement}

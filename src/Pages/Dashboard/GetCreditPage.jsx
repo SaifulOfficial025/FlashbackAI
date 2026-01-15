@@ -7,37 +7,37 @@ const packages = [
   {
     id: "max",
     name: "Max Pack",
-    credits: "80 credit",
-    price: "$2.49",
-    subtitle: "per moment",
+    credits: "80 Credits",
+    price: "$0.79",
+    subtitle: "Per Credit",
     badge: "BEST VALUE",
-    badgeColor: "bg-[#ff4d4d]",
-    borderColor: "border-[#ffcccc]",
+    badgeColor: "bg-[#5FAF8E]",
+    borderColor: "border-gray-200",
   },
   {
     id: "power",
-    name: "Power pack",
-    credits: "40 credits",
-    price: "$2.49",
-    subtitle: "per moment",
+    name: "Power Pack",
+    credits: "40 Credits",
+    price: "$0.99",
+    subtitle: "Per Credit",
     badge: "MOST POPULAR",
-    badgeColor: "bg-[#ffd700]",
+    badgeColor: "bg-[#fdca17]",
     borderColor: "border-gray-200",
   },
   {
     id: "value",
-    name: "Value pack",
-    credits: "20 credits",
-    price: "$2.49",
-    subtitle: "per moment",
+    name: "Value Pack",
+    credits: "20 Credits",
+    price: "$1.49",
+    subtitle: "Per Credit",
     borderColor: "border-gray-200",
   },
   {
     id: "boost",
-    name: "Boost pack",
-    credits: "10 credits",
-    price: "$2.49",
-    subtitle: "per moment",
+    name: "Boost Pack",
+    credits: "10 Credits",
+    price: "$1.79",
+    subtitle: "Per Credit",
     borderColor: "border-gray-200",
   },
 ];
@@ -50,7 +50,7 @@ export const GetCreditPage = () => {
     <div className="flex-1 bg-[#fdfcfb] py-12 px-6 flex flex-col items-center animate-in fade-in duration-500">
       {/* Page Title */}
       <h1 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-12">
-        Choose Your package
+        Choose Your Package
       </h1>
 
       {/* Package Selection List */}
@@ -87,7 +87,7 @@ export const GetCreditPage = () => {
                 <div
                   className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
                     selected === pkg.id
-                      ? "border-[#7c602e] bg-[#7c602e]"
+                      ? "border-[#5FAF8E] bg-[#5FAF8E]"
                       : "border-gray-300"
                   }`}
                 >
@@ -115,7 +115,7 @@ export const GetCreditPage = () => {
                 <p className="text-xl font-bold text-gray-900 leading-none">
                   {pkg.price}
                 </p>
-                <p className="text-[11px] text-gray-400 font-medium uppercase tracking-tight">
+                <p className="text-[11px] text-gray-400 font-medium  tracking-tight">
                   {pkg.subtitle}
                 </p>
               </div>
@@ -125,7 +125,7 @@ export const GetCreditPage = () => {
       </div>
 
       {/* Action Button */}
-      <div className="w-full max-w-[480px] text-center">
+      <div className="w-full max-w-[630px] text-center">
         <button
           onClick={() => navigate("/dashboard/got-Credit")}
           className="w-full bg-[#7c602e] hover:bg-[#634d25] text-white py-4 rounded-2xl font-bold text-base uppercase tracking-widest shadow-xl shadow-[#7c602e]/20 transition-all active:scale-[0.98] mb-6"
@@ -140,23 +140,8 @@ export const GetCreditPage = () => {
         </div>
 
         {/* Payment Icons */}
-        <div className="flex items-center justify-center gap-6 opacity-80 grayscale hover:grayscale-0 transition-all">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-            className="h-4"
-            alt="Mastercard"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
-            className="h-3"
-            alt="Visa"
-          />
-          <span className="text-[11px] font-black tracking-tighter text-[#1a1c33] italic">
-            MAESTRO
-          </span>
-          <span className="text-xs font-bold text-gray-800">Pay</span>
-          <span className="text-xs font-bold text-gray-400">G Pay</span>
-          <span className="text-[11px] font-black text-[#016fcf]">AMEX</span>
+        <div className="flex items-center justify-center  hover:grayscale-0 transition-all">
+          <img src="/payments.png" alt="" className="h-16" />
         </div>
       </div>
     </div>

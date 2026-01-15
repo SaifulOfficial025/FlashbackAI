@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 function Steps() {
   return (
-    <div className="w-full flex flex-col items-center py-8 sm:py-10 md:py-12 bg-[#faf9f5] mb-8 sm:mb-12 md:mb-16">
+    <div className="w-full flex flex-col items-center py-8 sm:py-10 md:py-12 bg-[#faf9f5]  -mt-20">
       <div className="w-full flex flex-col items-center mb-6 sm:mb-8">
         <span className="uppercase tracking-widest text-xs sm:text-md font-bold text-[#7A693B] mb-1 sm:mb-2">
           Simple Process — Everyone Can Do It
@@ -12,7 +12,7 @@ function Steps() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-1 sm:mb-2">
           Create Your Memory Video in 3 Easy Steps
         </h2>
-        <p className="text-black text-xs sm:text-sm font-bold md:text-base text-center max-w-xs sm:max-w-md md:max-w-xl">
+        <p className="text-black text-xs sm:text-sm  md:text-base text-center max-w-xs sm:max-w-md md:max-w-xl">
           Create a beautiful memory video from a single photo — no skills
           needed.
         </p>
@@ -81,8 +81,8 @@ function Steps() {
             Download & Share the Joy
           </h3>
           <p className="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-4 text-center">
-            Choose the motion style that fits your memory best — gentle
-            movement, cinematic storytelling, or natural lifelike motion.
+            Save your memory video and share it with the people you love most —
+            these moments are meant to be remembered.
           </p>
           <img
             src="/step3.png"
